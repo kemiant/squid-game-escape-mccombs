@@ -1,7 +1,8 @@
 components:
-- layout_properties: {slot: default}
-  name: content_panel
-  properties: {}
+- components: []
+  layout_properties: {slot: default}
+  name: column_panel_1
+  properties: {col_widths: '{}'}
   type: ColumnPanel
 container:
   properties: {html: '@theme:standard-page.html'}
