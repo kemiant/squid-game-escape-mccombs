@@ -67,4 +67,4 @@ Best of luck, agents! Dive in, and may the best team prevail!"""
         open_form(response['last_started_form'])
     elif response['status'] == 'registered':
         # This is a new team, start with the first challenge
-        open_form('C1_IdentifyArt')
+        open_form('P1_Red_Light')
