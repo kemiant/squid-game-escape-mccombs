@@ -42,3 +42,20 @@ class P1_Red_Light(P1_Red_LightTemplate):
     combination_value = self.combination_lock_form.get_combination()
     if anvil.server.call_s("", combination_value):
       open_form("")
+
+  def pandas_click(self, **event_args):
+      file_media = anvil.server.call('get_file','C1_Pandas')
+      if file_media is not None:
+        anvil.download(file_media)
+      else:
+        notification = "The file could not be found."
+        anvil.alert(notification)
+  
+  
+  def SQL_click(self, **event_args):
+    file_media = anvil.server.call('get_file','C1_SQL')
+    if file_media is not None:
+      anvil.download(file_media)
+    else:
+      notification = "The file could not be found."
+      anvil.alert(notification)
