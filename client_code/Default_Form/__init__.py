@@ -6,6 +6,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 from anvil import Timer
+import anvil.js
 
 
 class Default_Form(Default_FormTemplate):
