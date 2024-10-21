@@ -1,9 +1,9 @@
-from ._anvil_designer import Form1Template
+from ._anvil_designer import C1_RedLightTemplate
 from anvil import *
 import anvil.server
 
 
-class Form1(Form1Template):
+class C1_RedLight(C1_RedLightTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
