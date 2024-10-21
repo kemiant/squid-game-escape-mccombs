@@ -1,0 +1,49 @@
+components:
+- components:
+  - event_bindings: {change: digit1_change}
+    layout_properties:
+      col_widths: {}
+      full_width_row: true
+      grid_position: DXXHOD,NPTWOU
+    name: digit1
+    properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: '1', role: combination-lock, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+    type: TextBox
+  - event_bindings: {change: digit2_change}
+    layout_properties:
+      col_widths: {}
+      full_width_row: true
+      grid_position: DXXHOD,DOXQBS
+    name: digit2
+    properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: '2', role: combination-lock, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+    type: TextBox
+  - event_bindings: {change: digit3_change}
+    name: digit3
+    properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: '3', role: combination-lock, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+    type: TextBox
+  - event_bindings: {change: digit4_change}
+    layout_properties:
+      col_widths: {}
+      full_width_row: true
+      grid_position: DXXHOD,GUOVMR
+    name: digit4
+    properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: '4', role: combination-lock, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+    type: TextBox
+  - event_bindings: {change: digit5_change}
+    name: digit5
+    properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: '5', role: combination-lock, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+    type: TextBox
+  - event_bindings: {change: digit6_change, pressed_enter: digit6_pressed_enter}
+    layout_properties:
+      col_widths: {}
+      full_width_row: true
+      grid_position: DXXHOD,WUWEYO
+    name: digit6
+    properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: '6', role: combination-lock, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
+    type: TextBox
+  layout_properties: {full_width_row: false, grid_position: 'VQSEFB,FGUECP'}
+  name: flow_panel_1
+  properties: {align: left, background: '', border: '', foreground: '', role: null, spacing: medium, spacing_above: small, spacing_below: small, tooltip: '', vertical_align: full, visible: true}
+  type: FlowPanel
+container: {type: ColumnPanel}
+custom_component: true
+is_package: true

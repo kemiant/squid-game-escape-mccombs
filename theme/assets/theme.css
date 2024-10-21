@@ -705,3 +705,16 @@ input[disabled] ~ span {
 }
 
 .nav-holder > .logo > .placeholder { outline: 1px dotted; padding-left: 16px; padding-right: 16px; margin: 8px 8px 0;}
+
+
+.anvil-role-combination-lock {
+  width: 37px;
+  height: 50px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px rgb(20, 181, 230);
+  font-size: 25px;
+  color: white;
+  outline: none;
+}

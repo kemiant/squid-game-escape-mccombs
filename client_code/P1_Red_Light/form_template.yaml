@@ -1,0 +1,46 @@
+components:
+- components:
+  - components:
+    - components:
+      - layout_properties: {grid_position: 'WASOUN,OICUWH'}
+        name: label_1
+        properties: {role: terminal-textbox}
+        type: Label
+      - layout_properties: {grid_position: 'RIPYPI,EWXKTQ'}
+        name: rich_text_1
+        properties: {format: restricted_html, role: terminal-textbox}
+        type: RichText
+      layout_properties: {grid_position: 'DJWVYE,QJCMYH'}
+      name: card_1
+      properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: bordered-section, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+      type: ColumnPanel
+    - layout_properties: {grid_position: 'PJPHYT,AGUPQG'}
+      name: flow_panel_1
+      properties: {}
+      type: FlowPanel
+    - components:
+      - layout_properties: {grid_position: 'ERRJNL,ZEFZIZ'}
+        name: text_box_1
+        properties: {placeholder: Input the Secret Code Here, role: terminal-textbox, spacing_above: medium, spacing_below: medium}
+        type: TextBox
+      - event_bindings: {click: submit_click}
+        layout_properties: {full_width_row: true, grid_position: 'ERRJNL,FGJCSU'}
+        name: Submit
+        properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: filled, spacing_above: medium, spacing_below: medium, text: Submit Code, tooltip: '', underline: false, visible: true}
+        type: Button
+      layout_properties: {grid_position: 'OYHVEP,GGLXSP'}
+      name: card_3
+      properties: {background: '', border: '', col_spacing: medium, col_widths: '{"FGJCSU":15,"OPSUJK":10}', foreground: '', role: bordered-section, spacing_above: small, spacing_below: small, tooltip: '', visible: false, wrap_on: mobile}
+      type: ColumnPanel
+    layout_properties: {grid_position: 'UKAQRK,JJALDL'}
+    name: column_panel_1
+    properties: {background: '', border: '', col_spacing: medium, col_widths: '{"KRXVIO":15,"AGUPQG":45}', foreground: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true
