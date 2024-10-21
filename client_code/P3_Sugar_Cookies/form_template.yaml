@@ -26,10 +26,12 @@ components:
     - components:
       - components:
         - components:
-          - event_bindings: {click: pandas_click}
+          - data_bindings:
+            - {code: 'border: solid black;', property: border, writeback: false}
+            event_bindings: {click: pandas_click}
             layout_properties: {grid_position: 'MQIQWQ,WFIZKK'}
             name: pandas
-            properties: {background: '#0d4033', foreground: '', role: outlined, text: Pandas}
+            properties: {background: '#dc9f42 ', border: '#dc9f42 ', foreground: '#8c601d', role: outlined, text: Pandas}
             type: Button
           layout_properties: {width: 659.9921875}
           name: card_2
@@ -50,7 +52,7 @@ components:
       - event_bindings: {click: submit_click}
         layout_properties: {full_width_row: true, grid_position: 'ERRJNL,FGJCSU'}
         name: Submit
-        properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: filled, spacing_above: medium, spacing_below: medium, text: Submit Code, tooltip: '', underline: false, visible: true}
+        properties: {align: center, background: '#dc9f42 ', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '#8c601d', icon: '', icon_align: left, italic: false, role: filled, spacing_above: medium, spacing_below: medium, text: Submit Code, tooltip: '', underline: false, visible: true}
         type: Button
       layout_properties: {grid_position: 'OYHVEP,GGLXSP'}
       name: card_3
