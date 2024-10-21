@@ -1,5 +1,10 @@
 allow_embedding: false
 db_schema:
+  teams:
+    client: none
+    columns: []
+    server: full
+    title: teams
   users:
     client: none
     columns:

@@ -1,4 +1,4 @@
-from ._anvil_designer import P6_Old_ManTemplate
+from ._anvil_designer import P6_Old_Man_1Template
 from anvil import *
 import anvil.users
 import anvil.tables as tables
@@ -9,7 +9,7 @@ from anvil import Timer
 import anvil.js
 
 
-class P6_Old_Man(P6_Old_ManTemplate):
+class P6_Old_Man_1(P6_Old_Man_1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -42,3 +42,20 @@ class P6_Old_Man(P6_Old_ManTemplate):
     combination_value = self.combination_lock_form.get_combination()
     if anvil.server.call_s("", combination_value):
       open_form("")
+
+  def pandas_click(self, **event_args):
+      file_media = anvil.server.call('get_file','C1_Pandas')
+      if file_media is not None:
+        anvil.download(file_media)
+      else:
+        notification = "The file could not be found."
+        anvil.alert(notification)
+  
+  
+  def SQL_click(self, **event_args):
+    file_media = anvil.server.call('get_file','C1_SQL')
+    if file_media is not None:
+      anvil.download(file_media)
+    else:
+      notification = "The file could not be found."
+      anvil.alert(notification)
