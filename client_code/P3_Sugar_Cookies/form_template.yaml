@@ -1,6 +1,15 @@
 components:
 - components:
   - components:
+    - layout_properties: {}
+      name: image_1
+      properties: {height: 269, source: _/theme/Dalgona-Cookie-Banner.png}
+      type: Image
+    layout_properties: {grid_position: 'UKAQRK,WKIKSN'}
+    name: linear_panel_1
+    properties: {}
+    type: LinearPanel
+  - components:
     - components:
       - layout_properties: {grid_position: 'WASOUN,OICUWH'}
         name: label_1
@@ -20,7 +29,7 @@ components:
           - event_bindings: {click: pandas_click}
             layout_properties: {grid_position: 'MQIQWQ,WFIZKK'}
             name: pandas
-            properties: {role: outlined, text: Pandas}
+            properties: {background: '#0d4033', foreground: '', role: outlined, text: Pandas}
             type: Button
           layout_properties: {width: 659.9921875}
           name: card_2
@@ -51,11 +60,20 @@ components:
     name: column_panel_1
     properties: {background: '', border: '', col_spacing: medium, col_widths: '{"KRXVIO":15,"AGUPQG":45}', foreground: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
     type: ColumnPanel
+  - components:
+    - layout_properties: {}
+      name: image_2
+      properties: {height: 281.6666564941406, source: _/theme/Dalgona-Cookie-Banner.png}
+      type: Image
+    layout_properties: {grid_position: 'UKAQRK,XMKCQY'}
+    name: linear_panel_2
+    properties: {}
+    type: LinearPanel
   layout_properties: {slot: default}
   name: content_panel
-  properties: {}
+  properties: {background: white, col_widths: '{"WKIKSN":5,"JJALDL":70,"XMKCQY":5}'}
   type: ColumnPanel
 container:
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', visible: true}
   type: HtmlTemplate
 is_package: true
