@@ -11,5 +11,5 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/tables.yml
-startup: {module: Introduction, type: form}
+startup: {module: Default_Form, type: form}
 startup_form: null
