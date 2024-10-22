@@ -72,3 +72,9 @@ class P1_Red_Light(P1_Red_LightTemplate):
     if self.stay_alive >= 300:
       self.stay_alive = 0
       anvil.server.call_s('stay_alive')
+
+  def text_box_1_pressed_enter(self, **event_args):
+    if anvil.server.call_s('p1_check',self.text_box_1.text):
+      open_form('P2_Glass_Steps')
+    else:
+      alert("We tried inputting that password, but it did not work")

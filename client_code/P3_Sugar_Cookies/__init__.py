@@ -13,7 +13,7 @@ class P3_Sugar_Cookies(P3_Sugar_CookiesTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.text_to_display1 = """"""
+    self.text_to_display1 = """Hello"""
     self.text_to_display2 = """"""
     # Counter for the position of next character to display
     self.current_position = 0
@@ -32,11 +32,10 @@ class P3_Sugar_Cookies(P3_Sugar_CookiesTemplate):
       # Add cursor
       self.label_1.text += "▮"
     else:
-      # Stop the typing effect
-      anvil.js.call_js("stopTypingEffect")
-      self.label_1.visible = False
-      self.rich_text_1.visible = True
-      self.rich_text_1.content = self.text_to_display2
+      anvil.js.call_js('stopTypingEffect')
+      self.flow_panel_1.visible = True
+      anvil.server.call_s('start_timer', 'c3_start')
+      self.card_3.visible = True
 
   def submit_click(self, **event_args):
     combination_value = self.combination_lock_form.get_combination()
@@ -50,3 +49,14 @@ class P3_Sugar_Cookies(P3_Sugar_CookiesTemplate):
       else:
         notification = "The file could not be found."
         anvil.alert(notification)
+
+
+  def text_box_1_pressed_enter(self, **event_args):
+    if anvil.server.call_s('p3_check',self.text_box_1.text):
+      open_form('P4_Tug_War')
+    else:
+      alert("We tried inputting that password, but it did not work")
+
+  def label_1_show(self, **event_args):
+    """This method is called when the Label is shown on the screen"""
+    pass

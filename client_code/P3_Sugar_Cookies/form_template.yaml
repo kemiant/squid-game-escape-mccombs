@@ -11,9 +11,10 @@ components:
     type: LinearPanel
   - components:
     - components:
-      - layout_properties: {grid_position: 'WASOUN,OICUWH'}
+      - event_bindings: {show: label_1_show}
+        layout_properties: {grid_position: 'WASOUN,OICUWH'}
         name: label_1
-        properties: {role: terminal-textbox}
+        properties: {role: terminal-textbox, text: ''}
         type: Label
       - layout_properties: {grid_position: 'RIPYPI,EWXKTQ'}
         name: rich_text_1
@@ -24,8 +25,7 @@ components:
       properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: bordered-section, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
       type: ColumnPanel
     - components:
-      - data_bindings:
-        - {code: 'border: solid black;', property: border, writeback: false}
+      - data_bindings: []
         event_bindings: {click: pandas_click}
         name: pandas
         properties: {background: '#dc9f42 ', border: '#dc9f42 ', foreground: '#8c601d', role: outlined, text: Pandas}
@@ -35,7 +35,8 @@ components:
       properties: {align: center, vertical_align: middle}
       type: FlowPanel
     - components:
-      - layout_properties: {grid_position: 'ERRJNL,ZEFZIZ'}
+      - event_bindings: {pressed_enter: text_box_1_pressed_enter}
+        layout_properties: {grid_position: 'ERRJNL,ZEFZIZ'}
         name: text_box_1
         properties: {placeholder: Input the Secret Code Here, role: terminal-textbox, spacing_above: medium, spacing_below: medium}
         type: TextBox
@@ -44,13 +45,13 @@ components:
         name: Submit
         properties: {align: center, background: '#dc9f42 ', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '#8c601d', icon: '', icon_align: left, italic: false, role: filled, spacing_above: medium, spacing_below: medium, text: Submit Code, tooltip: '', underline: false, visible: true}
         type: Button
-      layout_properties: {grid_position: 'OYHVEP,GGLXSP'}
+      layout_properties: {grid_position: 'JHOMUK,ZOCVHH'}
       name: card_3
       properties: {background: '', border: '', col_spacing: medium, col_widths: '{"FGJCSU":15}', foreground: '', role: bordered-section, spacing_above: small, spacing_below: small, tooltip: '', visible: false, wrap_on: mobile}
       type: ColumnPanel
     layout_properties: {grid_position: 'UKAQRK,JJALDL'}
     name: column_panel_1
-    properties: {background: '', border: '', col_spacing: medium, col_widths: '{"KRXVIO":15,"AGUPQG":45}', foreground: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
+    properties: {background: '', border: '', col_spacing: medium, col_widths: '{"AGUPQG":45}', foreground: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
     type: ColumnPanel
   - components:
     - layout_properties: {}
