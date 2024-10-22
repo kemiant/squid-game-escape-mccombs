@@ -1,5 +1,10 @@
 allow_embedding: false
 db_schema:
+  challenges:
+    client: none
+    columns: []
+    server: full
+    title: challenges
   teams:
     client: none
     columns:
