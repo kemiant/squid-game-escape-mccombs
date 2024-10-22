@@ -59,3 +59,16 @@ class P1_Red_Light(P1_Red_LightTemplate):
     else:
       notification = "The file could not be found."
       anvil.alert(notification)
+
+
+  def timer_1_tick(self, **event_args):
+    self.stay_alive += 1
+    if self.begin_time == True:
+      self.total_time += 1
+      minutes = int(int(self.total_time)//60)
+      seconds = int(int(self.total_time) % 60)
+      self.time_elapsed.text = f"{minutes} min {seconds} sec"
+    self.stay_alive += 1  
+    if self.stay_alive >= 300:
+      self.stay_alive = 0
+      anvil.server.call_s('stay_alive')

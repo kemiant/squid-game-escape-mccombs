@@ -2,7 +2,34 @@ allow_embedding: false
 db_schema:
   teams:
     client: none
-    columns: []
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      name: team_name
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      name: total_time
+      type: number
+    - admin_ui: {order: 2, width: 200}
+      name: p1_start
+      type: datetime
+    - admin_ui: {order: 3, width: 200}
+      name: p2_start
+      type: datetime
+    - admin_ui: {order: 4, width: 200}
+      name: p3_start
+      type: datetime
+    - admin_ui: {order: 5, width: 200}
+      name: p4_start
+      type: datetime
+    - admin_ui: {order: 6, width: 200}
+      name: p5_start
+      type: datetime
+    - admin_ui: {order: 7, width: 200}
+      name: p6_start
+      type: datetime
+    - admin_ui: {order: 8, width: 200}
+      name: end
+      type: datetime
     server: full
     title: teams
   users:
@@ -48,5 +75,5 @@ services:
 - client_config: {allow_remember_me: true, allow_signup: false, confirm_email: true, enable_automatically: true, remember_me_days: 0.3333, use_email: true}
   server_config: {user_table: users}
   source: /runtime/services/anvil/users.yml
-startup: {module: Introduction, type: form}
+startup: {module: P3_Sugar_Cookies, type: form}
 startup_form: null

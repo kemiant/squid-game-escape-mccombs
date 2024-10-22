@@ -3,7 +3,7 @@ components:
   - components:
     - layout_properties: {}
       name: image_1
-      properties: {height: 269, source: _/theme/Dalgona-Cookie-Banner.png}
+      properties: {display_mode: zoom_to_fill, height: 269, source: _/theme/Dalgona-Cookie-Banner.png}
       type: Image
     layout_properties: {grid_position: 'UKAQRK,WKIKSN'}
     name: linear_panel_1
@@ -24,25 +24,15 @@ components:
       properties: {background: '', border: '', col_spacing: medium, col_widths: '{}', foreground: '', role: bordered-section, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
       type: ColumnPanel
     - components:
-      - components:
-        - components:
-          - data_bindings:
-            - {code: 'border: solid black;', property: border, writeback: false}
-            event_bindings: {click: pandas_click}
-            layout_properties: {grid_position: 'MQIQWQ,WFIZKK'}
-            name: pandas
-            properties: {background: '#dc9f42 ', border: '#dc9f42 ', foreground: '#8c601d', role: outlined, text: Pandas}
-            type: Button
-          layout_properties: {width: 659.9921875}
-          name: card_2
-          properties: {role: bordered-section, visible: false}
-          type: ColumnPanel
-        name: flow_panel_1_copy
-        properties: {}
-        type: FlowPanel
+      - data_bindings:
+        - {code: 'border: solid black;', property: border, writeback: false}
+        event_bindings: {click: pandas_click}
+        name: pandas
+        properties: {background: '#dc9f42 ', border: '#dc9f42 ', foreground: '#8c601d', role: outlined, text: Pandas}
+        type: Button
       layout_properties: {grid_position: 'PJPHYT,AGUPQG'}
       name: flow_panel_1
-      properties: {}
+      properties: {align: center, vertical_align: middle}
       type: FlowPanel
     - components:
       - layout_properties: {grid_position: 'ERRJNL,ZEFZIZ'}
@@ -56,7 +46,7 @@ components:
         type: Button
       layout_properties: {grid_position: 'OYHVEP,GGLXSP'}
       name: card_3
-      properties: {background: '', border: '', col_spacing: medium, col_widths: '{"FGJCSU":15,"OPSUJK":10}', foreground: '', role: bordered-section, spacing_above: small, spacing_below: small, tooltip: '', visible: false, wrap_on: mobile}
+      properties: {background: '', border: '', col_spacing: medium, col_widths: '{"FGJCSU":15}', foreground: '', role: bordered-section, spacing_above: small, spacing_below: small, tooltip: '', visible: false, wrap_on: mobile}
       type: ColumnPanel
     layout_properties: {grid_position: 'UKAQRK,JJALDL'}
     name: column_panel_1
@@ -65,7 +55,7 @@ components:
   - components:
     - layout_properties: {}
       name: image_2
-      properties: {height: 281.6666564941406, source: _/theme/Dalgona-Cookie-Banner.png}
+      properties: {display_mode: zoom_to_fill, height: 281.6666564941406, source: _/theme/Dalgona-Cookie-Banner.png}
       type: Image
     layout_properties: {grid_position: 'UKAQRK,XMKCQY'}
     name: linear_panel_2

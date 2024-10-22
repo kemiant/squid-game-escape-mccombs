@@ -27,12 +27,12 @@ def register_or_resume_team(team_name):
     if team:
         # Updated mapping of table column names to their corresponding form names
         challenge_map = {
-            'c1_start': 'C1_IdentifyArt',
-            'c2_start': 'C2_Blueprints',
-            'c2_2_start': 'C2_P2_Adjust',
-            'c2_3_start': 'C2_P3_Name',
-            'c3_start': 'C3_Hacking',
-            'c4_start': 'C4_Final',
+            'p1_start': 'P1_Red_Light',
+            'p2_start': 'P2_Glass_Steps',
+            'p3_start': 'P3_Sugar_Cookies',
+            'p4_start': 'P4_Tug_War',
+            'p5_start': 'P5_Marbles',
+            'p6_start': 'P6_Old_Man_1',
             'end': 'Completion'
         }
         
@@ -54,12 +54,12 @@ def register_or_resume_team(team_name):
         app_tables.teams.add_row(
             team_name=team_name, 
             total_time=None, 
-            c1_start=None,
-            c2_start=None,
-            c2_2_start=None,
-            c2_3_start=None,
-            c3_start=None,
-            c4_start=None,
+            p1_start=None,
+            p2_start=None,
+            p3_start=None,
+            p4_start=None,
+            p5_start=None,
+            p6_start=None,
             end=None
         )
         anvil.server.session['team_name'] = team_name
