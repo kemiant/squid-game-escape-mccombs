@@ -11,6 +11,11 @@ components:
         properties: {format: restricted_html, role: terminal-textbox}
         type: RichText
       - components:
+        - event_bindings: {click: instruction_file_click}
+          layout_properties: {grid_position: 'MQIQWQ,DFWXKA'}
+          name: instruction_file
+          properties: {role: outlined, text: Instruction}
+          type: Button
         - event_bindings: {click: csv_file_click}
           layout_properties: {grid_position: 'MQIQWQ,WFIZKK'}
           name: csv_file

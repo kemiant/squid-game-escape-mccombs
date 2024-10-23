@@ -56,9 +56,12 @@ class P1_Red_Light(P1_Red_LightTemplate):
       alert("We tried inputting that password, but it did not work")
 
   def csv_file_click(self, **event_args):
-      file_media = anvil.server.call('get_file','C1_Pandas')
+      file_media = anvil.server.call('get_file','Players_CSV')
       if file_media is not None:
         anvil.download(file_media)
+        #if need to download more put here
+        #file_media = anvil.server.call('get_file','Players_CSV')
+        #anvil.download(file_media)
       else:
         notification = "The file could not be found."
         anvil.alert(notification)
@@ -72,7 +75,14 @@ class P1_Red_Light(P1_Red_LightTemplate):
       notification = "The file could not be found."
       anvil.alert(notification)
 
-
+  def instruction_file_click(self, **event_args):
+    file_media = anvil.server.call('get_file','p1_file')
+    if file_media is not None:
+      anvil.download(file_media)
+    else:
+      notification = "The file could not be found."
+      anvil.alert(notification)
+      
   def timer_1_tick(self, **event_args):
     self.stay_alive += 1
     if self.begin_time:
@@ -91,3 +101,5 @@ class P1_Red_Light(P1_Red_LightTemplate):
       open_form('P2_Glass_Steps')
     else:
       alert("We tried inputting that password, but it did not work")
+
+
