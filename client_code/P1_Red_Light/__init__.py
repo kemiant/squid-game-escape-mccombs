@@ -13,12 +13,15 @@ class P1_Red_Light(P1_Red_LightTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.text_to_display1 = """"""
-    self.text_to_display2 = """"""
+    self.text_to_display1 = """HEllo There"""
+    self.text_to_display2 = """Hello after"""
     # Counter for the position of next character to display
     self.current_position = 0
     # Start the typing effect
     anvil.js.call_js("startTypingEffect", self.type_text)
+    self.total_time = 0
+    self.begin_time = False
+    self.stay_alive = 0
 
   def type_text(self):
     # Remove cursor if it's there
@@ -37,14 +40,19 @@ class P1_Red_Light(P1_Red_LightTemplate):
       self.label_1.visible = False
       self.rich_text_1.visible = True
       self.rich_text_1.content = self.text_to_display2
+      #make sure to add these to each puzzle
       self.card_2.visible =True
       self.card_3.visible =True
+      self.card_4.visible =True
+      anvil.server.call_s('start_timer', 'p1_start')
+      self.begin_time = True
       
 
   def submit_click(self, **event_args):
-    combination_value = self.combination_lock_form.get_combination()
-    if anvil.server.call_s("", combination_value):
-      open_form("")
+    if anvil.server.call_s('p1_check',self.text_box_1.text):
+      open_form('P2_Glass_Steps')
+    else:
+      alert("We tried inputting that password, but it did not work")
 
   def pandas_click(self, **event_args):
       file_media = anvil.server.call('get_file','C1_Pandas')
@@ -66,10 +74,12 @@ class P1_Red_Light(P1_Red_LightTemplate):
 
   def timer_1_tick(self, **event_args):
     self.stay_alive += 1
-    if self.begin_time == True:
+    print("Checked")
+    if self.begin_time:
       self.total_time += 1
       minutes = int(int(self.total_time)//60)
       seconds = int(int(self.total_time) % 60)
+      
       self.time_elapsed.text = f"{minutes} min {seconds} sec"
     self.stay_alive += 1  
     if self.stay_alive >= 300:

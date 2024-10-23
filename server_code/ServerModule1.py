@@ -84,7 +84,7 @@ def stop_timer(team_name=None):
       team_name = anvil.server.session.get('team_name', None)
     team = app_tables.teams.get(team_name=team_name)
     if team:
-      elapsed_time = (datetime.now(timezone.utc) - team['c1_start']).total_seconds()
+      elapsed_time = (datetime.now(timezone.utc) - team['p1_start']).total_seconds()
       team['total_time'] = elapsed_time
       team['end'] = datetime.now(timezone.utc)
       return elapsed_time
@@ -96,8 +96,8 @@ def get_elapsed_time(team_name=None):
     if team_name is None:
         team_name = anvil.server.session.get('team_name', None)
     team = app_tables.teams.get(team_name=team_name)
-    if team and team['c1_start']:
-        elapsed_time = (datetime.now(timezone.utc) - team['c1_start']).total_seconds()
+    if team and team['p1_start']:
+        elapsed_time = (datetime.now(timezone.utc) - team['p1_start']).total_seconds()
         return int(elapsed_time)
     return 0
 
@@ -108,3 +108,18 @@ def get_file(file):
         return file_row['File']
     else:
         return None
+
+
+  #Challenge 1 check
+@anvil.server.callable
+def p1_check(entry):
+   if entry == "":
+     return True
+   else:
+     return False  
+
+
+@anvil.server.callable
+def stay_alive():
+    print('Server is alive')
+    return "Server is alive!"
