@@ -11,15 +11,15 @@ components:
         properties: {format: restricted_html, role: terminal-textbox}
         type: RichText
       - components:
-        - event_bindings: {click: pandas_click}
+        - event_bindings: {click: csv_file_click}
           layout_properties: {grid_position: 'MQIQWQ,WFIZKK'}
-          name: pandas
-          properties: {role: outlined, text: Pandas}
+          name: csv_file
+          properties: {role: outlined, text: CSV File}
           type: Button
-        - event_bindings: {click: SQL_click}
+        - event_bindings: {click: db_file_click}
           layout_properties: {grid_position: 'MQIQWQ,NGSDHV'}
-          name: SQL
-          properties: {role: outlined, text: SQL}
+          name: db_file
+          properties: {role: outlined, text: SQL DB File}
           type: Button
         data_bindings: []
         layout_properties: {grid_position: 'YFOIXW,HIBWSG'}
@@ -64,6 +64,11 @@ components:
     name: time_elapsed
     properties: {}
     type: Label
+  - event_bindings: {tick: timer_1_tick}
+    layout_properties: {grid_position: 'XJKVGZ,BRRGZO'}
+    name: timer_1
+    properties: {}
+    type: Timer
   layout_properties: {slot: left-nav}
   name: card_4
   properties: {background: 'theme:Gray 900', role: card, visible: false}

@@ -46,6 +46,7 @@ class P1_Red_Light(P1_Red_LightTemplate):
       self.card_4.visible =True
       anvil.server.call_s('start_timer', 'p1_start')
       self.begin_time = True
+      self.time_elapsed.visible = True
       
 
   def submit_click(self, **event_args):
@@ -54,7 +55,7 @@ class P1_Red_Light(P1_Red_LightTemplate):
     else:
       alert("We tried inputting that password, but it did not work")
 
-  def pandas_click(self, **event_args):
+  def csv_file_click(self, **event_args):
       file_media = anvil.server.call('get_file','C1_Pandas')
       if file_media is not None:
         anvil.download(file_media)
@@ -63,8 +64,8 @@ class P1_Red_Light(P1_Red_LightTemplate):
         anvil.alert(notification)
   
   
-  def SQL_click(self, **event_args):
-    file_media = anvil.server.call('get_file','C1_SQL')
+  def db_file_click(self, **event_args):
+    file_media = anvil.server.call('get_file','sqlite_all_files')
     if file_media is not None:
       anvil.download(file_media)
     else:
@@ -74,7 +75,6 @@ class P1_Red_Light(P1_Red_LightTemplate):
 
   def timer_1_tick(self, **event_args):
     self.stay_alive += 1
-    print("Checked")
     if self.begin_time:
       self.total_time += 1
       minutes = int(int(self.total_time)//60)
