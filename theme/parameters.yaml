@@ -303,3 +303,4 @@ roles:
 - components: [Label, Link]
   name: input-prompt
 - {name: combination-lock}
+- {name: roundedBorder}

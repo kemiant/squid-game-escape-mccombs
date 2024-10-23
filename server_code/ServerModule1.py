@@ -100,3 +100,11 @@ def get_elapsed_time(team_name=None):
         elapsed_time = (datetime.now(timezone.utc) - team['c1_start']).total_seconds()
         return int(elapsed_time)
     return 0
+
+@anvil.server.callable
+def get_file(file):
+    file_row = app_tables.challenges.get(Name=file)
+    if file_row:
+        return file_row['File']
+    else:
+        return None
