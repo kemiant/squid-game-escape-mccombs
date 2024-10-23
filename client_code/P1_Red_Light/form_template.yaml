@@ -21,6 +21,7 @@ components:
           name: SQL
           properties: {role: outlined, text: SQL}
           type: Button
+        data_bindings: []
         layout_properties: {grid_position: 'YFOIXW,HIBWSG'}
         name: card_2
         properties: {role: bordered-section, visible: false}

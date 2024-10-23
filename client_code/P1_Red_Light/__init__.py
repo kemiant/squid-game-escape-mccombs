@@ -37,6 +37,9 @@ class P1_Red_Light(P1_Red_LightTemplate):
       self.label_1.visible = False
       self.rich_text_1.visible = True
       self.rich_text_1.content = self.text_to_display2
+      self.card_2.visible =True
+      self.card_3.visible =True
+      
 
   def submit_click(self, **event_args):
     combination_value = self.combination_lock_form.get_combination()
