@@ -113,7 +113,7 @@ def get_file(file):
   #Challenge 1 check
 @anvil.server.callable
 def p1_check(entry):
-   if entry == "":
+   if entry == "943YJXTKJLPFK":
      return True
    else:
      return False  
@@ -123,3 +123,43 @@ def p1_check(entry):
 def stay_alive():
     print('Server is alive')
     return "Server is alive!"
+
+
+@anvil.server.callable
+def p2_check(entry):
+   if entry == "943YJXTKJLPFK":
+     return True
+   else:
+     return False  
+
+
+
+@anvil.server.callable
+def p3_check(entry):
+   if entry == "943YJXTKJLPFK":
+     return True
+   else:
+     return False  
+
+@anvil.server.callable
+def p4_check(entry):
+   if entry == "943YJXTKJLPFK":
+     return True
+   else:
+     return False  
+
+
+#don't need possibly
+@anvil.server.callable
+def p5_check(entry):
+   if entry == "943YJXTKJLPFK":
+     return True
+   else:
+     return False  
+
+@anvil.server.callable
+def p6_check(entry):
+   if entry == "943YJXTKJLPFK":
+     return True
+   else:
+     return False  
