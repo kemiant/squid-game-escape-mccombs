@@ -80,12 +80,12 @@ components:
     type: LinearPanel
   layout_properties: {slot: default}
   name: content_panel
-  properties: {background: white, col_widths: '{"WKIKSN":5,"JJALDL":70,"XMKCQY":5}'}
+  properties: {background: '#fbebd5', col_widths: '{"WKIKSN":5,"JJALDL":70,"XMKCQY":5}'}
   type: ColumnPanel
 - event_bindings: {tick: timer_1_tick}
   layout_properties: {slot: left-nav}
   name: timer_1
-  properties: {}
+  properties: {interval: 1}
   type: Timer
 - components:
   - layout_properties: {grid_position: 'LQKMMZ,LEXPBN'}

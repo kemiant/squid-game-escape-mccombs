@@ -86,5 +86,5 @@ services:
 - client_config: {allow_remember_me: true, allow_signup: false, confirm_email: true, enable_automatically: true, remember_me_days: 0.3333, use_email: true}
   server_config: {user_table: users}
   source: /runtime/services/anvil/users.yml
-startup: {module: P1_Red_Light, type: form}
+startup: {module: P2_Glass_Steps, type: form}
 startup_form: null

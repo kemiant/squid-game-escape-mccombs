@@ -7,7 +7,7 @@ from anvil.tables import app_tables
 import anvil.server
 from anvil import Timer
 import anvil.js
-
+import time
 
 class P3_Sugar_Cookies(P3_Sugar_CookiesTemplate):
   def __init__(self, **properties):
@@ -35,6 +35,7 @@ class P3_Sugar_Cookies(P3_Sugar_CookiesTemplate):
       # Add cursor
       self.label_1.text += "▮"
     else:
+      time.sleep(1)
       # Stop the typing effect
       anvil.js.call_js("stopTypingEffect")
       self.label_1.visible = False

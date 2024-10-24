@@ -7,14 +7,29 @@ from anvil.tables import app_tables
 import anvil.server
 from anvil import Timer
 import anvil.js
+import time
 
 
 class P2_Glass_Steps(P2_Glass_StepsTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.text_to_display1 = """"""
-    self.text_to_display2 = """"""
+    self.text_to_display1 = """Welcome to the Glass Stepping Game
+
+In the world of the Squid Game, every step can mean the difference between life and death. The Glass Stepping Game is no exception. Players must navigate a deadly bridge made of fragile glass tiles, where only one path is safe. Each wrong step shatters the glass beneath them, sending them to their doom.
+This time, Player 48 is at the mercy of your skills. But instead of simply watching, you are given a different task. As their trusted hacker, you must guide them safely across the glass by hacking into the Squid Game’s player database. The information you uncover will help you decide which tiles are safe and which ones will shatter.
+Your mission is clear: clean the data and extract the vital information needed to save Player 48. Each step you take in the data cleaning process brings you closer to identifying the correct glass tiles they must step on.
+The fate of Player 48 is in your hands. The clock is ticking, and the glass bridge is waiting. Will your data cleaning skills be enough to lead them safely across?"""
+    self.text_to_display2 = """<h1>Welcome to the Glass Stepping Game</h1>
+
+<p>In the world of the Squid Game, every step can mean the difference between life and death. The Glass Stepping Game is no exception. Players must navigate a deadly bridge made of fragile glass tiles, where only one path is safe. Each wrong step shatters the glass beneath them, sending them to their doom.</p>
+
+<p>This time, <strong>Player 48</strong> is at the mercy of your skills. But instead of simply watching, you are given a different task. As their trusted hacker, you must <em>guide them safely</em> across the glass by hacking into the Squid Game’s player database. The information you uncover will help you decide which tiles are safe and which ones will shatter.</p>
+
+<p>Your mission is clear: <strong>clean the data</strong> and extract the vital information needed to save Player 48. Each step you take in the data cleaning process brings you closer to identifying the correct glass tiles they must step on.</p>
+
+<p>The fate of Player 48 is in your hands. The clock is ticking, and the glass bridge is waiting. Will your data cleaning skills be enough to lead them safely across?</p>
+"""
     # Counter for the position of next character to display
     self.current_position = 0
     # Start the typing effect
@@ -36,6 +51,7 @@ class P2_Glass_Steps(P2_Glass_StepsTemplate):
       self.label_1.text += "▮"
     else:
       # Stop the typing effect
+      time.sleep(1)
       anvil.js.call_js("stopTypingEffect")
       self.label_1.visible = False
       self.rich_text_1.visible = True

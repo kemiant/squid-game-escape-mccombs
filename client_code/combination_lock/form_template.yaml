@@ -32,7 +32,7 @@ components:
     name: digit5
     properties: {align: left, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', hide_text: false, italic: false, placeholder: '5', role: combination-lock, spacing_above: small, spacing_below: small, text: '', tooltip: '', type: text, underline: false, visible: true}
     type: TextBox
-  - event_bindings: {change: digit6_change, pressed_enter: digit6_pressed_enter}
+  - event_bindings: {change: digit6_change}
     layout_properties:
       col_widths: {}
       full_width_row: true

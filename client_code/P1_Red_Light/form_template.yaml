@@ -62,7 +62,7 @@ components:
   - event_bindings: {tick: timer_1_tick}
     layout_properties: {grid_position: 'XJKVGZ,BRRGZO'}
     name: timer_1
-    properties: {}
+    properties: {interval: 1}
     type: Timer
   layout_properties: {slot: left-nav}
   name: card_4

@@ -127,7 +127,7 @@ def stay_alive():
 
 @anvil.server.callable
 def p2_check(entry):
-   if entry == "943YJXTKJLPFK":
+   if entry == "ppoGIsugARs":
      return True
    else:
      return False  
