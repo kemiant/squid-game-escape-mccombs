@@ -13,8 +13,39 @@ class P1_Red_Light(P1_Red_LightTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.text_to_display1 = """HEllo There"""
-    self.text_to_display2 = """Hello after"""
+    self.text_to_display1 = """Player 136,
+
+Right now, Player 48 is in the "Red Light, Green Light" stage, where every movement counts. As they inch their way forward, you need to extract a critical password that will give you access to the mainframe and help them proceed in the future games.
+
+Your Mission:
+
+Locate the Password: The password is buried deep within the system, hidden in the data stream. Extract the critical information before the doll turns around.
+Maintain Stealth: The giant doll monitors every movement. Stay still whenever the room goes red. Failing to do so will expose your connection.
+Hack the Mainframe: Use the password to unlock the database. Once you’re in, you’ll have access to vital information for the next games.
+Time is of the essence. The guards are watching, and the doll could turn around at any moment. Stay vigilant.
+
+Embark on this journey with precision and stealth. Success means survival, Player 136.
+
+Click the button below to get hacking and stay alive!
+"""
+    self.text_to_display2 = """<p><strong>Player 136,</strong></p>
+
+<p>Right now, Player 48 is in the <strong>"Red Light, Green Light"</strong> stage, where every movement counts. As they inch their way forward, you need to extract a <strong>critical password</strong> that will give you access to the mainframe and help them proceed in the future games.</p>
+
+<p><strong>Your Mission:</strong></p>
+
+<ul>
+    <li>Locate the <strong>Password</strong>: The password is buried deep within the system, hidden in the data stream. Extract the critical information before the doll turns around.</li>
+    <li>Maintain <strong>Stealth</strong>: The giant doll monitors every movement. Stay still whenever the room goes red. Failing to do so will expose your connection.</li>
+    <li><strong>Hack the Mainframe</strong>: Use the password to unlock the database. Once you’re in, you’ll have access to vital information for the next games.</li>
+</ul>
+
+<p>Time is of the essence. The guards are watching, and the doll could turn around at any moment. <em>Stay vigilant.</em></p>
+
+<p>Embark on this journey with precision and stealth. Success means survival, Player 136.</p>
+
+<p><strong>Click the button below to get hacking and stay alive!</strong></p>
+"""
     # Counter for the position of next character to display
     self.current_position = 0
     # Start the typing effect
