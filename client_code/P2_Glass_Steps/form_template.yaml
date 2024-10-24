@@ -16,12 +16,18 @@ components:
       type: ColumnPanel
     - components:
       - components:
-        - event_bindings: {click: pandas_click}
-          layout_properties: {grid_position: 'MQIQWQ,WFIZKK'}
-          name: pandas
-          properties: {role: outlined, text: Pandas}
+        - event_bindings: {click: instruction_file_click}
+          layout_properties: {grid_position: 'MQIQWQ,DFWXKA'}
+          name: instruction_file
+          properties: {role: outlined, text: Instruction}
           type: Button
-        layout_properties: {width: 659.9921875}
+        - event_bindings: {click: csv_file_click}
+          layout_properties: {grid_position: 'MQIQWQ,WFIZKK'}
+          name: csv_file
+          properties: {role: outlined, text: CSV File}
+          type: Button
+        data_bindings: []
+        layout_properties: {width: 892.4683749999999}
         name: card_2
         properties: {role: bordered-section, visible: false}
         type: ColumnPanel

@@ -43,10 +43,21 @@ class P2_Glass_Steps(P2_Glass_StepsTemplate):
     if anvil.server.call_s("", combination_value):
       open_form("")
       
-  def pandas_click(self, **event_args):
-      file_media = anvil.server.call('get_file','C1_Pandas')
+  def csv_file_click(self, **event_args):
+      file_media = anvil.server.call('get_file','Players_CSV')
       if file_media is not None:
         anvil.download(file_media)
+        #if need to download more put here
+        #file_media = anvil.server.call('get_file','Players_CSV')
+        #anvil.download(file_media)
       else:
         notification = "The file could not be found."
         anvil.alert(notification)
+
+  def instruction_file_click(self, **event_args):
+    file_media = anvil.server.call('get_file','p1_file')
+    if file_media is not None:
+      anvil.download(file_media)
+    else:
+      notification = "The file could not be found."
+      anvil.alert(notification)
