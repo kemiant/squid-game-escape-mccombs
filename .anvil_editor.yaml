@@ -1,6 +1,18 @@
 unique_ids:
   assets:
-    Dalgona-Cookie-Banner.png: '1729533680816660207464406.6218'
+    Visuals/.gitkeep: '1729778516745352564238792.37244'
+    Visuals/Animations/.gitkeep: '1729778546145489061778.6759144'
+    Visuals/Animations/Dalgona_Loading.gif: '1729778591635709654929329.5562'
+    Visuals/Animations/Door Sliding Animation.gif: '172977857414733386814797.635056'
+    Visuals/Animations/Marble_Loading.gif: '1729778581314469102931185.0863'
+    Visuals/Animations/TugOfWarPageAnimation.gif: '1729778612557990688768388.5419'
+    Visuals/Banners/.gitkeep: '1729778529916131109167633.39598'
+    Visuals/Banners/Dalgona-Cookie-Banner.png: '1729533680816660207464406.6218'
+    Visuals/Banners/Game Card (REDUCED SIZE).png: '1729778700301690494637457.0593'
+    Visuals/Banners/Marble_Bag.png: '1729778655319840200719587.1626'
+    Visuals/Banners/Old_Man.png: '1729778662955597140982883.1755'
+    Visuals/Banners/left.png: '1729778750991221564506846.31323'
+    Visuals/Banners/right.png: '1729778757912572657779955.5272'
     standard-page.html: YUX2XKIWOPVZSOLP2WMQMVBQCINAHBGI
     theme.css: SMPLAYY22XZ3XLUKU4L3TTGFQMTH44SN
   forms:

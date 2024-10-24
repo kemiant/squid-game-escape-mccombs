@@ -83,6 +83,6 @@ components:
   properties: {background: 'theme:Gray 900', role: card, visible: false}
   type: ColumnPanel
 container:
-  properties: {html: '@theme:standard-page.html'}
+  properties: {background: '', html: '@theme:standard-page.html'}
   type: HtmlTemplate
 is_package: true

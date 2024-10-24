@@ -83,6 +83,6 @@ components:
   properties: {interval: 1}
   type: Timer
 container:
-  properties: {html: '@theme:standard-page.html'}
+  properties: {background: '#0a1719', html: '@theme:standard-page.html'}
   type: HtmlTemplate
 is_package: true
