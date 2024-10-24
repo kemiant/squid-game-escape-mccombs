@@ -54,7 +54,14 @@ class P1_Red_Light(P1_Red_LightTemplate):
       open_form('P2_Glass_Steps')
     else:
       alert("We tried inputting that password, but it did not work")
+      
+  def text_box_1_pressed_enter(self, **event_args):
+    if anvil.server.call_s('p1_check',self.text_box_1.text):
+      open_form('P2_Glass_Steps')
+    else:
+      alert("We tried inputting that password, but it did not work")
 
+  
   def csv_file_click(self, **event_args):
       file_media = anvil.server.call('get_file','Players_CSV')
       if file_media is not None:
@@ -66,14 +73,7 @@ class P1_Red_Light(P1_Red_LightTemplate):
         notification = "The file could not be found."
         anvil.alert(notification)
   
-  
-  def db_file_click(self, **event_args):
-    file_media = anvil.server.call('get_file','sqlite_all_files')
-    if file_media is not None:
-      anvil.download(file_media)
-    else:
-      notification = "The file could not be found."
-      anvil.alert(notification)
+
 
   def instruction_file_click(self, **event_args):
     file_media = anvil.server.call('get_file','p1_file')
@@ -95,11 +95,5 @@ class P1_Red_Light(P1_Red_LightTemplate):
     if self.stay_alive >= 300:
       self.stay_alive = 0
       anvil.server.call_s('stay_alive')
-
-  def text_box_1_pressed_enter(self, **event_args):
-    if anvil.server.call_s('p1_check',self.text_box_1.text):
-      open_form('P2_Glass_Steps')
-    else:
-      alert("We tried inputting that password, but it did not work")
 
 

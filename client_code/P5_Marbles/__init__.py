@@ -19,6 +19,9 @@ class P5_Marbles(P5_MarblesTemplate):
     self.current_position = 0
     # Start the typing effect
     anvil.js.call_js("startTypingEffect", self.type_text)
+    self.total_time = 0
+    self.begin_time = False
+    self.stay_alive = 0
 
   def type_text(self):
     # Remove cursor if it's there
@@ -37,7 +40,28 @@ class P5_Marbles(P5_MarblesTemplate):
       self.label_1.visible = False
       self.rich_text_1.visible = True
       self.rich_text_1.content = self.text_to_display2
+      #make sure to add these to each puzzle
+      self.card_2.visible =True
+      self.card_3.visible =True
+      self.card_4.visible =True
+      anvil.server.call_s('start_timer', 'p5_start')
+      self.begin_time = True
+      self.time_elapsed.visible = True
 
+  def timer_1_tick(self, **event_args):
+    self.stay_alive += 1
+    if self.begin_time:
+      self.total_time += 1
+      minutes = int(int(self.total_time)//60)
+      seconds = int(int(self.total_time) % 60)
+      
+      self.time_elapsed.text = f"{minutes} min {seconds} sec"
+    self.stay_alive += 1  
+    if self.stay_alive >= 300:
+      self.stay_alive = 0
+      anvil.server.call_s('stay_alive')
+
+  
   def submit_click(self, **event_args):
     combination_value = self.combination_lock_form.get_combination()
     if anvil.server.call_s("", combination_value):

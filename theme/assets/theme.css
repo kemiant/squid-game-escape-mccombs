@@ -723,4 +723,6 @@ input[disabled] ~ span {
 .anvil-role-roundedBorder {
     border: 4px solid #8c601d ;
     border-radius: 10px;
+    background-color: #dc9f42 ;
+    color: #8c601d;
 }

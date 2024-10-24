@@ -19,6 +19,9 @@ class P4_Tug_War(P4_Tug_WarTemplate):
     self.current_position = 0
     # Start the typing effect
     anvil.js.call_js("startTypingEffect", self.type_text)
+    self.total_time = 0
+    self.begin_time = False
+    self.stay_alive = 0
 
   def type_text(self):
     # Remove cursor if it's there
@@ -37,23 +40,58 @@ class P4_Tug_War(P4_Tug_WarTemplate):
       self.label_1.visible = False
       self.rich_text_1.visible = True
       self.rich_text_1.content = self.text_to_display2
+      #make sure to add these to each puzzle
+      self.card_2.visible =True
+      self.card_3.visible =True
+      self.card_4.visible =True
+      anvil.server.call_s('start_timer', 'p4_start')
+      self.begin_time = True
+      self.time_elapsed.visible = True
 
-  def submit_click(self, **event_args):
-    combination_value = self.combination_lock_form.get_combination()
-    if anvil.server.call_s("", combination_value):
-      open_form("")
+  def timer_1_tick(self, **event_args):
+    self.stay_alive += 1
+    if self.begin_time:
+      self.total_time += 1
+      minutes = int(int(self.total_time)//60)
+      seconds = int(int(self.total_time) % 60)
       
-  def pandas_click(self, **event_args):
-      file_media = anvil.server.call('get_file','C1_Pandas')
-      if file_media is not None:
-        anvil.download(file_media)
-      else:
-        notification = "The file could not be found."
-        anvil.alert(notification)
+      self.time_elapsed.text = f"{minutes} min {seconds} sec"
+    self.stay_alive += 1  
+    if self.stay_alive >= 300:
+      self.stay_alive = 0
+      anvil.server.call_s('stay_alive')
+
   
-  
-  def SQL_click(self, **event_args):
-    file_media = anvil.server.call('get_file','C1_SQL')
+  def submit_click(self, **event_args):
+    combination_value = self.combination_lock1.get_combination()
+    if anvil.server.call_s('p4_check',combination_value):
+      open_form('P5_Marbles')
+    else:
+      self.combination_lock1.clear_values()
+      self.combination_lock1.flash_effect()
+      
+  def instruction_file_click(self, **event_args):
+    file_media = anvil.server.call('get_file','p4_file')
+    if file_media is not None:
+      anvil.download(file_media)
+    else:
+      notification = "The file could not be found."
+      anvil.alert(notification)
+
+  def csv_file_click(self, **event_args):
+    file_media = anvil.server.call('get_file','Players_CSV')
+    if file_media is not None:
+      anvil.download(file_media)
+      #if need to download more put here
+      #file_media = anvil.server.call('get_file','Players_CSV')
+      #anvil.download(file_media)
+    else:
+      notification = "The file could not be found."
+      anvil.alert(notification)
+
+
+  def db_file_click(self, **event_args):
+    file_media = anvil.server.call('get_file','sqlite_all_files')
     if file_media is not None:
       anvil.download(file_media)
     else:
