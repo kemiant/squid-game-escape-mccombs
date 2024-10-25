@@ -13,8 +13,22 @@ class P4_Tug_War(P4_Tug_WarTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.text_to_display1 = """"""
-    self.text_to_display2 = """"""
+    self.text_to_display1 = """Mission Brief: Hack into the Squid Game Tug of War
+
+You sit in front of your screen, the soft glow of code reflecting off your face in the dimly lit room. Time is ticking, and Player 48's life is hanging by a thread. The familiar hum of your custom-built terminal fills the air as you gain unauthorized access to the Squid Game’s player database. You know that the tug-of-war game is coming up fast, and Player 48 needs a perfect team to survive. They’re depending on you to find the best combination of strength, weight, and endurance. If you fail, Player 48 will be yanked into the abyss along with the rest of their team—game over, for good.
+
+With a few swift keystrokes, the database opens up in front of you. Thousands of player profiles flicker by in an endless stream of numbers, stats, and personal data. But you don't have time for all of them. You need six players—just six—who can stand shoulder-to-shoulder with Player 48 and fight like their lives depend on it. And they do.
+
+The game is rigged against them, but the right combination of 6 players could be the difference between victory and a deadly fall. As you scour the profiles, patterns emerge. Some players have immense strength, while others possess the weight needed to counterbalance the pull. And then there are those who can outlast any opponent in sheer endurance."""
+    self.text_to_display2 = """        <h1>Mission Brief: Hack into the Squid Game Tug of War</h1>
+        <p>You sit in front of your screen, the soft glow of code reflecting off your face in the dimly lit room. <span class="highlight">Time is ticking</span>, and Player 48's life is hanging by a thread. The familiar hum of your custom-built terminal fills the air as you gain unauthorized access to the Squid Game’s player database.</p>
+        
+        <p>You know that the tug-of-war game is coming up fast, and Player 48 needs a <span class="highlight">perfect team to survive</span>. They’re depending on you to find the best combination of strength, weight, and endurance. If you fail, Player 48 will be yanked into the abyss along with the rest of their team—game over, for good.</p>
+        
+        <p>With a few swift keystrokes, the database opens up in front of you. Thousands of player profiles flicker by in an endless stream of numbers, stats, and personal data. But you don't have time for all of them. <span class="highlight">You need six players—just six</span>—who can stand shoulder-to-shoulder with Player 48 and fight like their lives depend on it. And they do.</p>
+        
+        <p>The game is rigged against them, but the right combination of 6 players could be the difference between victory and a deadly fall. As you scour the profiles, patterns emerge. Some players have immense strength, while others possess the weight needed to counterbalance the pull. And then there are those who can outlast any opponent in sheer endurance.</p>
+        """
     # Counter for the position of next character to display
     self.current_position = 0
     # Start the typing effect
