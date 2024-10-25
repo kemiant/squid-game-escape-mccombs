@@ -28,6 +28,7 @@ The game is rigged against them, but the right combination of 6 players could be
         <p>With a few swift keystrokes, the database opens up in front of you. Thousands of player profiles flicker by in an endless stream of numbers, stats, and personal data. But you don't have time for all of them. <span class="highlight">You need six players—just six</span>—who can stand shoulder-to-shoulder with Player 48 and fight like their lives depend on it. And they do.</p>
         
         <p>The game is rigged against them, but the right combination of 6 players could be the difference between victory and a deadly fall. As you scour the profiles, patterns emerge. Some players have immense strength, while others possess the weight needed to counterbalance the pull. And then there are those who can outlast any opponent in sheer endurance.</p>
+        <p>To start, click the buttons below to download the instructions and files needed to solve this puzzle.</p>
         """
     # Counter for the position of next character to display
     self.current_position = 0

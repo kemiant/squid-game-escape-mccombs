@@ -13,7 +13,7 @@ class P5_Marbles(P5_MarblesTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.text_to_display1 = """"""
+    self.text_to_display1 = """Using the games and rounds dataset"""
     self.text_to_display2 = """"""
     # Counter for the position of next character to display
     self.current_position = 0
