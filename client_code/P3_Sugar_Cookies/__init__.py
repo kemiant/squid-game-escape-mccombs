@@ -13,8 +13,23 @@ class P3_Sugar_Cookies(P3_Sugar_CookiesTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.text_to_display1 = """Hello"""
-    self.text_to_display2 = """"""
+    self.text_to_display1 = """Welcome to the Sugar Cookie Game
+You’ve entered one of the most delicate challenges in Squid Game: the Sugar Cookie Game. To survive, you must select a shape to cut from a brittle sugar cookie. But the wrong choice could be your downfall.
+
+To give yourself the best chance, you need to create a plot from the database provided to reveal a special shape. This shape is your key—show it to the guard, and you’ll be granted an easier cookie to cut.
+
+Instructions
+Use the resources available by clicking the button below. Follow the data carefully and reveal the shape that will win you favor with the guard. Your survival depends on it."""
+    self.text_to_display2 = """<h2>Welcome to the Sugar Cookie Game</h2>
+
+<p>You’ve entered one of the most delicate challenges in Squid Game: the Sugar Cookie Game. To survive, you must select a shape to cut from a brittle sugar cookie. But the wrong choice could be your downfall.</p>
+
+<p>To give yourself the best chance, you need to create a <strong>plot from the database</strong> provided to reveal a special shape. <strong>This shape is your key</strong>—show it to the guard, and you’ll be granted an easier cookie to cut.</p>
+
+<h3>Instructions</h3>
+
+<p>Use the resources available by clicking the button below. Follow the data carefully and reveal the shape that will win you favor with the guard. Your survival depends on it.</p>
+"""
     # Counter for the position of next character to display
     self.current_position = 0
     # Start the typing effect

@@ -3,7 +3,7 @@ components:
   - components:
     - layout_properties: {}
       name: image_1
-      properties: {display_mode: zoom_to_fill, height: 269, source: _/theme/Dalgona-Cookie-Banner.png}
+      properties: {display_mode: zoom_to_fill, height: '', role: bannerSpan, source: _/theme/Visuals/Banners/Dalgona-Cookie-Banner.png, spacing_above: none, spacing_below: none}
       type: Image
     layout_properties: {grid_position: 'UKAQRK,WKIKSN'}
     name: linear_panel_1
@@ -11,14 +11,14 @@ components:
     type: LinearPanel
   - components:
     - components:
-      - event_bindings: {show: label_1_show}
+      - event_bindings: {}
         layout_properties: {grid_position: 'WASOUN,OICUWH'}
         name: label_1
-        properties: {role: terminal-textbox, text: ''}
+        properties: {foreground: '#8c601d', role: terminal-textbox, text: ''}
         type: Label
       - layout_properties: {grid_position: 'RIPYPI,EWXKTQ'}
         name: rich_text_1
-        properties: {format: restricted_html, role: terminal-textbox}
+        properties: {foreground: '#8c601d', format: restricted_html, role: terminal-textbox}
         type: RichText
       layout_properties: {grid_position: 'DJWVYE,QJCMYH'}
       name: card_1
@@ -48,7 +48,7 @@ components:
         type: ColumnPanel
       layout_properties: {grid_position: 'PJPHYT,AGUPQG'}
       name: flow_panel_1
-      properties: {align: center, vertical_align: middle}
+      properties: {align: center, spacing_above: medium, spacing_below: large, vertical_align: middle}
       type: FlowPanel
     - components:
       - event_bindings: {pressed_enter: text_box_1_pressed_enter}
@@ -72,7 +72,7 @@ components:
   - components:
     - layout_properties: {}
       name: image_2
-      properties: {display_mode: zoom_to_fill, height: 281.6666564941406, source: _/theme/Dalgona-Cookie-Banner.png}
+      properties: {display_mode: zoom_to_fill, height: '', role: bannerSpan, source: _/theme/Visuals/Banners/Dalgona-Cookie-Banner.png, spacing_above: none, spacing_below: none}
       type: Image
     layout_properties: {grid_position: 'UKAQRK,XMKCQY'}
     name: linear_panel_2
@@ -91,18 +91,19 @@ components:
   - layout_properties: {grid_position: 'LQKMMZ,LEXPBN'}
     name: label_3
     properties:
+      foreground: '#8c601d'
       text: |
         Time Elapsed:
     type: Label
   - layout_properties: {grid_position: 'RPJZQK,RESEFY'}
     name: time_elapsed
-    properties: {}
+    properties: {foreground: '#8c601d'}
     type: Label
   layout_properties: {slot: left-nav}
   name: card_4
-  properties: {background: 'theme:Gray 900', role: card, visible: false}
+  properties: {background: '#fbebd5', role: card, visible: false}
   type: ColumnPanel
 container:
-  properties: {html: '@theme:standard-page.html', visible: true}
+  properties: {background: '#fbebd5', foreground: '', html: '@theme:standard-page.html', visible: true}
   type: HtmlTemplate
 is_package: true

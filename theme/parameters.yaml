@@ -304,3 +304,4 @@ roles:
   name: input-prompt
 - {name: combination-lock}
 - {name: roundedBorder}
+- {name: bannerSpan}

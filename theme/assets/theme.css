@@ -726,3 +726,11 @@ input[disabled] ~ span {
     background-color: #dc9f42 ;
     color: #8c601d;
 }
+
+.anvil-role-bannerSpan {
+    width: 120%; /* Make the image wider than the window */
+    height: 600px; /* Set a height for the banner */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    position: relative;
+    left: -15%; /* Move the image to start from beyond the left edge */
+}
