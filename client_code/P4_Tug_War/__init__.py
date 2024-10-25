@@ -64,12 +64,12 @@ class P4_Tug_War(P4_Tug_WarTemplate):
 
   
   def submit_click(self, **event_args):
-    combination_value = self.combination_lock1.get_combination()
+    combination_value = self.combination_lock_1.get_combination()
     if anvil.server.call_s('p4_check',combination_value):
       open_form('P5_Marbles')
     else:
-      self.combination_lock1.clear_values()
-      self.combination_lock1.flash_effect()
+      self.combination_lock_1.clear_values()
+      self.combination_lock_1.flash_effect()
       
   def instruction_file_click(self, **event_args):
     file_media = anvil.server.call('get_file','p4_file')
