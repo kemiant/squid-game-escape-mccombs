@@ -2,6 +2,15 @@ components:
 - components:
   - components:
     - components:
+      - layout_properties: {col_xs: 4, row: GPDNRO, width_xs: 3}
+        name: image_1
+        properties: {height: 118.6666259765625, source: _/theme/Visuals/Banners/Game Card (REDUCED SIZE).png}
+        type: Image
+      layout_properties: {grid_position: 'DVPCRC,KHKBHO'}
+      name: grid_panel_1
+      properties: {}
+      type: GridPanel
+    - components:
       - layout_properties: {grid_position: 'GKSBNZ,TQSRND'}
         name: label_1
         properties: {align: left, background: '', bold: false, border: '', font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: terminal-textbox, spacing_above: small, spacing_below: small, text: '', tooltip: '', underline: false, visible: true}
@@ -24,6 +33,6 @@ components:
   properties: {col_widths: '{}'}
   type: ColumnPanel
 container:
-  properties: {html: '@theme:standard-page.html'}
+  properties: {background: black, html: '@theme:standard-page.html'}
   type: HtmlTemplate
 is_package: true

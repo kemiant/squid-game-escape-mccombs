@@ -22,7 +22,7 @@ components:
           type: RepeatingPanel
         layout_properties: {width: 840.25}
         name: card_2
-        properties: {role: card}
+        properties: {background: white, role: card}
         type: ColumnPanel
       layout_properties: {grid_position: 'PJPHYT,AGUPQG'}
       name: flow_panel_1
@@ -32,9 +32,26 @@ components:
     name: column_panel_1
     properties: {background: '', border: '', col_spacing: medium, col_widths: '{"AGUPQG":45}', foreground: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
     type: ColumnPanel
+  - components:
+    - layout_properties: {col_xs: 0, row: DGIGKD, width_xs: 12}
+      name: still
+      properties: {source: _/theme/Visuals/Banners/Marble_Bag.png}
+      type: Image
+    - layout_properties: {col_xs: 1, row: YBQCAB, width_xs: 11}
+      name: animated
+      properties: {source: _/theme/Visuals/Animations/Marble_Loading.gif}
+      type: Image
+    - layout_properties: {col_xs: 0, row: KQFPNZ, width_xs: 12}
+      name: marble_counter
+      properties: {align: center, text: 0/5}
+      type: Label
+    layout_properties: {grid_position: 'UKAQRK,NAQACS'}
+    name: grid_panel_1
+    properties: {}
+    type: GridPanel
   layout_properties: {slot: default}
   name: content_panel
-  properties: {}
+  properties: {col_widths: '{"JJALDL":45,"NAQACS":15}'}
   type: ColumnPanel
 - components:
   - layout_properties: {grid_position: 'LQKMMZ,LEXPBN'}
