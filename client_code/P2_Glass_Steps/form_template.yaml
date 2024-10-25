@@ -1,6 +1,15 @@
 components:
 - components:
   - components:
+    - layout_properties: {}
+      name: image_1
+      properties: {height: 73.6666259765625, source: _/theme/Visuals/Banners/GlassBridgeBanner.png}
+      type: Image
+    layout_properties: {grid_position: 'RRCRWR,DSIHTE'}
+    name: linear_panel_1
+    properties: {}
+    type: LinearPanel
+  - components:
     - components:
       - layout_properties: {grid_position: 'WASOUN,OICUWH'}
         name: label_1
