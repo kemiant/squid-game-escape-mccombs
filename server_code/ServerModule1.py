@@ -136,7 +136,7 @@ def p2_check(entry):
 
 @anvil.server.callable
 def p3_check(entry):
-   if entry == "943YJXTKJLPFK":
+   if entry == "pulltherope963":
      return True
    else:
      return False  
