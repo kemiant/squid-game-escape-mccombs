@@ -10,6 +10,10 @@ components:
     properties: {}
     type: LinearPanel
   - components:
+    - layout_properties: {grid_position: 'LVFMWC,NIHAZQ'}
+      name: image_3
+      properties: {source: _/theme/Visuals/Banners/Old_Man.png}
+      type: Image
     - components:
       - layout_properties: {grid_position: 'WASOUN,OICUWH'}
         name: label_1
