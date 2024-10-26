@@ -53,8 +53,8 @@ class P5_Marbles(P5_MarblesTemplate):
       "question": "Which round had the smallest number of survivors?",
       "question": "How many rounds had at least 50 eliminations?",
       "question": "What is the highest number of eliminations in a round?"}
-
-  answers_list = [
+    self.repeating_panel_1.items = self.questions
+    answers_list = [
       "Honeycomb/Dalgona",  # Answer to question 1
       "1",  # Answer to question 2
       "3",  # Answer to question 3
@@ -85,8 +85,26 @@ class P5_Marbles(P5_MarblesTemplate):
       "1",  # Answer to question 28
       "0",  # Answer to question 29
       "20"]  # Answer to question 30
+    self.correct_count = 0
+    self.marble_counter.text = f"{self.correct_count} out of 10"
 
 
+    # Function to store answers from the repeating panel
+
+  
+  def store_answer(self, question_index, answer):
+    # Check if the answer is correct by comparing it to the correct answer
+    correct_answer = self.correct_answers[question_index]
+    
+    if answer == correct_answer:
+      self.correct_count += 1
+      Notification(f"Correct!").show()
+    else:
+      Notification(f"Incorrect.").show()
+    
+    # Update the correct count label
+    self.label_correct_count.text = f"Correct Answers: {self.correct_count}"
+    
   def type_text(self):
     # Remove cursor if it's there
     if self.label_1.text.endswith("▮"):
