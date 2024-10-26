@@ -305,3 +305,5 @@ roles:
 - {name: combination-lock}
 - {name: roundedBorder}
 - {name: bannerSpan}
+- {name: scroll-container}
+- {name: 'fixed-bottom-image '}

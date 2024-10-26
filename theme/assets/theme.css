@@ -734,3 +734,18 @@ input[disabled] ~ span {
     position: relative;
     left: -15%; /* Move the image to start from beyond the left edge */
 }
+
+
+.anvil-role-scroll-container {
+  height: 500px;  /* Set a fixed height for the container */
+  overflow-y: auto;  /* Enable vertical scrolling */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
+
+
+.anvil-role-fixed-bottom-image {
+  position: fixed;  /* Fixes the image to the viewport */
+  bottom: 0;  
+  z-index: 1000;
+  width: 90%; 
+  left: 13%
