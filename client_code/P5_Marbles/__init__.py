@@ -22,6 +22,70 @@ class P5_Marbles(P5_MarblesTemplate):
     self.total_time = 0
     self.begin_time = False
     self.stay_alive = 0
+    questions_dict = {
+      "question": "Find the game with the highest survival rate.",
+      "question": "List all games where the survival rate is above 50%. (Count)",
+      "question": "How many games have a difficulty rating of 8 or higher?",
+      "question": "Display the count of games where the maximum participants exceed 100.",
+      "question": "Find the game with the lowest difficulty level.",
+      "question": "What is the average survival rate across all games?",
+      "question": "How many games have exactly 100 participants?",
+      "question": "Retrieve the game with the lowest difficulty.",
+      "question": "Find the count of games with a survival rate less than 0.5.",
+      "question": "Count how many games have a survival rate of exactly 50%.",
+      "question": "Which game has the fewest participants?",
+      "question": "Calculate the total number of participants across all games.",
+      "question": "Find the difference in difficulty between the hardest and easiest game.",
+      "question": "How many games have a difficulty rating of 7?",
+      "question": "Retrieve the game where the survival rate is lower than 0.4.",
+      "question": "Find the round with the highest number of eliminations.",
+      "question": "How many rounds had more than 20 eliminations?",
+      "question": "How many rounds from game with GameID = 4?",
+      "question": "What is the total number of survivors in all rounds?",
+      "question": "How many rounds have exactly 1 survivor?",
+      "question": "How many rounds occurred in January 2024?",
+      "question": "How many rounds had fewer than 10 survivors?",
+      "question": "How many rounds had fewer eliminations than survivors?",
+      "question": "How many unique games are present in the rounds dataset?",
+      "question": "What is the highest number of survivors in any round?",
+      "question": "What is the average number of eliminations per round?",
+      "question": "How many rounds had exactly 1 elimination?",
+      "question": "Which round had the smallest number of survivors?",
+      "question": "How many rounds had at least 50 eliminations?",
+      "question": "What is the highest number of eliminations in a round?"}
+
+  answers_list = [
+      "Honeycomb/Dalgona",  # Answer to question 1
+      "1",  # Answer to question 2
+      "3",  # Answer to question 3
+      "2",  # Answer to question 4
+      "Marbles",  # Answer to question 5
+      "0.45",  # Answer to question 6
+      "1",  # Answer to question 7
+      "Marbles",  # Answer to question 8
+      "3",  # Answer to question 9
+      "2",  # Answer to question 10
+      "Glass Bridge",  # Answer to question 11
+      "840",  # Answer to question 12
+      "4",  # Answer to question 13
+      "1",  # Answer to question 14
+      "Glass Bridge",  # Answer to question 15
+      "20",  # Answer to question 16
+      "0",  # Answer to question 17
+      "2",  # Answer to question 18
+      "43",  # Answer to question 19
+      "1",  # Answer to question 20
+      "5",  # Answer to question 21
+      "3",  # Answer to question 22
+      "0",  # Answer to question 23
+      "3",  # Answer to question 24
+      "20",  # Answer to question 25
+      "8.6",  # Answer to question 26
+      "4",  # Answer to question 27
+      "1",  # Answer to question 28
+      "0",  # Answer to question 29
+      "20"]  # Answer to question 30
+
 
   def type_text(self):
     # Remove cursor if it's there
