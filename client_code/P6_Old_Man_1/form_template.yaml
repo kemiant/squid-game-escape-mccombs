@@ -3,7 +3,7 @@ components:
   - components:
     - layout_properties: {}
       name: image_1
-      properties: {height: 289.6666259765625, source: _/theme/Visuals/Banners/left.png}
+      properties: {display_mode: zoom_to_fill, height: 490.0859375, source: _/theme/Visuals/Banners/left.png}
       type: Image
     layout_properties: {grid_position: 'UKAQRK,SQJFKQ'}
     name: linear_panel_1
@@ -12,7 +12,7 @@ components:
   - components:
     - layout_properties: {grid_position: 'LVFMWC,NIHAZQ'}
       name: image_3
-      properties: {source: _/theme/Visuals/Banners/Old_Man.png}
+      properties: {background: '#c783d2', source: _/theme/Visuals/Banners/Old_Man.png}
       type: Image
     - components:
       - layout_properties: {grid_position: 'WASOUN,OICUWH'}
@@ -32,7 +32,7 @@ components:
         - event_bindings: {click: instruction_file_click}
           layout_properties: {grid_position: 'MQIQWQ,DFWXKA'}
           name: instruction_file
-          properties: {role: outlined, text: Instruction}
+          properties: {border: '', role: outlined, text: Instruction}
           type: Button
         - event_bindings: {click: csv_file_click}
           layout_properties: {grid_position: 'MQIQWQ,WFIZKK'}
@@ -56,7 +56,7 @@ components:
       - event_bindings: {click: submit_click}
         layout_properties: {full_width_row: true, grid_position: 'ERRJNL,FGJCSU'}
         name: Submit
-        properties: {align: center, background: '', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: filled, spacing_above: medium, spacing_below: medium, text: Submit Name, tooltip: '', underline: false, visible: true}
+        properties: {align: center, background: '#c783d2', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: filled, spacing_above: medium, spacing_below: medium, text: Submit Name, tooltip: '', underline: false, visible: true}
         type: Button
       layout_properties: {grid_position: 'OYHVEP,GGLXSP'}
       name: card_3
@@ -69,7 +69,7 @@ components:
   - components:
     - layout_properties: {}
       name: image_2
-      properties: {height: 292, source: _/theme/Visuals/Banners/right.png}
+      properties: {display_mode: zoom_to_fill, height: 491.0703125, source: _/theme/Visuals/Banners/right.png}
       type: Image
     layout_properties: {grid_position: 'UKAQRK,SZNMMK'}
     name: linear_panel_2

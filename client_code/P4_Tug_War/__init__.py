@@ -39,6 +39,8 @@ The game is rigged against them, but the right combination of 6 players could be
     self.stay_alive = 0
     self.still.visible = False
     self.animated.visible = False
+    self.sim_win.visible = False
+    self.sim_fail.visible = False
     
 
   def type_text(self):
@@ -90,7 +92,8 @@ The game is rigged against them, but the right combination of 6 players could be
       self.animated.visible = True
       self.still.visible = False
       time.sleep(4)
-      self.animated.style['filter'] = 'hue-rotate(120deg)'
+      self.animated.visible = False
+      self.sim_win.visible = True
       Notification(f"Team Positions Simulation Passed! Moving to next stage...").show()
       time.sleep(3)
       open_form('P5_Marbles')
@@ -99,11 +102,14 @@ The game is rigged against them, but the right combination of 6 players could be
       self.combination_lock_1.flash_effect()
       self.animated.visible = True
       self.still.visible = False
-      time.sleep(4)
-      self.animated.style['filter'] = 'hue-rotate(0deg)'
-      Notification(f"Team Positions Simulation Failed! Try again...").show()
+      time.sleep(3)
       self.animated.visible = False
+      self.sim_fail.visible = True
+      time.sleep(2)
+      Notification(f"Team Positions Simulation Failed! Try again...").show()
+      time.sleep(1)
       self.still.visible = True
+      self.sim_fail.visible = False
       
   def instruction_file_click(self, **event_args):
     file_media = anvil.server.call('get_file','p4_file')

@@ -133,6 +133,7 @@ Will you gather the 10 marbles in time, or will the participant’s journey end 
         # Check if the marble counter equals 10
     if self.correct_count == 10:
       Notification("You've earned 10 marbles! You may proceed alive...").show()
+      time.sleep(2)
       open_form('P6_Old_Man_1')  # Replace 'form_4' with the actual form name
 
   def update_item_index(self, current_index, new_index):
