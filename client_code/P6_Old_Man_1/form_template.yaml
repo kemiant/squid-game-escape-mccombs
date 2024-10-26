@@ -39,11 +39,6 @@ components:
           name: csv_file
           properties: {role: outlined, text: CSV File}
           type: Button
-        - event_bindings: {click: db_file_click}
-          layout_properties: {grid_position: 'MQIQWQ,MTPKMZ'}
-          name: db_file
-          properties: {role: outlined, text: SQL DB File}
-          type: Button
         data_bindings: []
         layout_properties: {width: 827.7925937499999}
         name: card_2
