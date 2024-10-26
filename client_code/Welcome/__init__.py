@@ -10,25 +10,29 @@ class Welcome(WelcomeTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.text_to_display = """Welcome to Escape McCombs: Art Heist!
+    self.text_to_display = """Welcome to the Escape McCombs: Squid Game
+Greetings, Player 136.
 
-Greetings, everyone!
+You’ve been selected to play a dangerous and high-stakes game, not for yourself, but to help Player 48 survive. The rules of the Squid Game may be cruel, but you hold a powerful advantage. As a hacker, your role is to provide guidance and cheats through the complexities ahead. Every line of code you solve brings Player 48 one step closer to victory.
 
-You are about to embark on a thrilling adventure, crafted specially by BAXA - UT's Business Analytics Association.
+The path is treacherous. Challenges will come your way, riddles of logic, puzzles of code, and only through your skill can Player 48 navigate the horrors of this game. But remember—this is not just a challenge of intelligence; it’s a test of wit and timing.
 
-As you dive into the mysteries that await, remember that while competition is fierce, collaboration and honor are paramount.
+Are you ready to face the dangers of the Squid Game and help Player 48 escape with their life... and the fortune?
 
 Rules & Guidelines:
-  1. Fair Play: No sabotaging other teams. Let's maintain a competitive yet respectful environment.
-  
-  2. Use of Tools: While the internet is at your disposal, using ChatGPT or any other AI/ML models for assistance is strictly prohibited. We value human ingenuity and problem-solving skills in this challenge.
-  
-  3. Submission Protocol: For any textbox, the way to submit your answer is to press enter within the textbox. Ensure your entries are accurate before submission.
-  
-  4. Platform Etiquette: Given the technical constraints of the platform, Anvil might occasionally exhibit lag. We request your patience. Please refrain from spamming the 'enter' or 'submit' buttons. Give the system a few moments to process your actions.
+Fair Play:
+No sabotaging other teams. Let's maintain a competitive yet respectful environment.
 
+Use of Tools:
+While the internet is at your disposal, using ChatGPT or any other AI/ML models for assistance is strictly prohibited. We value human ingenuity and problem-solving skills in this challenge.
 
-Best of luck, agents! Dive in, and may the best team prevail!"""
+Submission Protocol:
+For any textbox, the way to submit your answer is to press enter within the textbox. Ensure your entries are accurate before submission.
+
+Platform Etiquette:
+Given the technical constraints of the platform, Anvil might occasionally exhibit lag. We request your patience. Please refrain from spamming the 'enter' or 'submit' buttons. Give the system a few moments to process your actions.
+
+Good luck, Player 136. The future of Player 48 rests in your hands."""
     # Counter for the position of next character to display
     self.current_position = 0
     # Start the typing effect

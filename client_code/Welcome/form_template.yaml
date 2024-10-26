@@ -33,6 +33,6 @@ components:
   properties: {col_widths: '{}'}
   type: ColumnPanel
 container:
-  properties: {background: black, html: '@theme:standard-page.html'}
+  properties: {background: black, html: '@theme:black screen.html'}
   type: HtmlTemplate
 is_package: true

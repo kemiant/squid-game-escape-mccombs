@@ -13,8 +13,21 @@ class P6_Old_Man_1(P6_Old_Man_1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.text_to_display1 = """"""
-    self.text_to_display2 = """"""
+    self.text_to_display1 = """The room is dimly lit, shadows creeping into the corners as screens hum with scattered fragments of data. You, the hacker, are seated in the center of this digital web, surrounded by codes that pulse with life, as if they know something you don’t. But you do know one thing—your mission: uncover the Founder.
+
+In the world of the Squid Game, secrets are more precious than lives. And the Founder, hidden behind layers of deception, has left faint traces that only a mind like yours can decipher. This isn’t a game of strength or survival—this is a game of intelligence, patterns, and precision.
+
+The clues are buried deep in the numbers, encoded into decisions, hidden behind walls of data. Your weapons are linear regression models, hidden variables, and the ability to connect the invisible threads that others have missed. Somewhere within this maze of data lies the answer to the most dangerous question: Who controls the game?
+
+The weight of the truth presses down, the room feels colder, more isolated. But the answer is there—just beyond reach. Time is ticking. Can you break the code before it’s too late?"""
+    self.text_to_display2 = """<p>The room is dimly lit, shadows creeping into the corners as screens hum with scattered fragments of data. You, the hacker, are seated in the center of this digital web, surrounded by codes that pulse with life, as if they know something you don’t. But you do know one thing—your mission: <strong>uncover the Founder</strong>.</p>
+
+<p>In the world of the Squid Game, secrets are more precious than lives. And the Founder, hidden behind layers of deception, has left faint traces that only a mind like yours can decipher. This isn’t a game of strength or survival—this is a game of intelligence, patterns, and precision.</p>
+
+<p>The clues are buried deep in the numbers, encoded into decisions, hidden behind walls of data. Your weapons are <strong>linear regression models</strong>, hidden variables, and the ability to connect the invisible threads that others have missed. Somewhere within this maze of data lies the answer to the most dangerous question: <strong>Who controls the game?</strong></p>
+
+<p>The weight of the truth presses down, the room feels colder, more isolated. But the answer is there—just beyond reach. Time is ticking. Can you break the code before it’s too late?</p>
+"""
     # Counter for the position of next character to display
     self.current_position = 0
     # Start the typing effect

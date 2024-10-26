@@ -307,3 +307,5 @@ roles:
 - {name: bannerSpan}
 - {name: scroll-container}
 - {name: 'fixed-bottom-image '}
+- {name: overlay-text}
+- {name: image-container}

@@ -4,6 +4,7 @@ unique_ids:
     Visuals/Animations/.gitkeep: '1729778546145489061778.6759144'
     Visuals/Animations/Dalgona_Loading.gif: '1729778591635709654929329.5562'
     Visuals/Animations/Door Sliding Animation.gif: '172977857414733386814797.635056'
+    Visuals/Animations/Door_sliding_pic.png: '1729922719404858354353206.2656'
     Visuals/Animations/Glass_Door.gif: '1729830391115296707554136.1828'
     Visuals/Animations/Marble_Loading.gif: '1729778581314469102931185.0863'
     Visuals/Animations/TugOfWarCharEnter.png: '1729908753358309198913352.98755'
@@ -22,6 +23,7 @@ unique_ids:
     Visuals/Banners/left.png: '1729778750991221564506846.31323'
     Visuals/Banners/right.png: '1729778757912572657779955.5272'
     Visuals/Banners/tug of war.png: '1729827733680315126843170.03937'
+    black screen.html: '1729924324984203207889268.92798'
     standard-page.html: YUX2XKIWOPVZSOLP2WMQMVBQCINAHBGI
     theme.css: SMPLAYY22XZ3XLUKU4L3TTGFQMTH44SN
   forms:
@@ -34,6 +36,7 @@ unique_ids:
     P5_Marbles.ItemTemplate1: '1729733102951431165858948.22876'
     P6_Old_Man_1: '1729522577180222647179673.67133'
     Welcome: ZDYNYGVHB2FXLKJF4RK2ZTUEU3VZVR2N
+    Welcome_Part1: '1729923618762564620223053.1372'
     combination_lock: '1729521488930892902966162.3527'
     completion: '1729559899956485009067227.14923'
   modules: {}

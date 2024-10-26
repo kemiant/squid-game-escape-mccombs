@@ -749,3 +749,21 @@ input[disabled] ~ span {
   z-index: 1000;
   width: 90%; 
   left: 13%
+
+
+.anvil-role-image-container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.anvil-role-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
