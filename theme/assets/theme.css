@@ -767,3 +767,19 @@ input[disabled] ~ span {
     font-size: 20px;
     text-align: center;
 }
+
+
+/* Fade-out animation */
+.anvil-role-fade-out {
+    animation: fadeOutEffect 2s forwards; /* 2 seconds duration */
+}
+
+/* Define the keyframes for the fade-out effect */
+@keyframes fadeOutEffect {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

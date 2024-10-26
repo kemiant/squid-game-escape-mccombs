@@ -58,8 +58,12 @@ Click the button below to get hacking and stay alive!
   def type_text(self):
     # Remove cursor if it's there
     
-    time.sleep(6)
-    self.image_1.visible= False
+    time.sleep(4.5)
+    #instead
+    self.image_1.role = "fade-out"
+    
+    #instead of doing false
+    #self.image_1.visible= False
     self.image_2.visible= True
     if self.label_1.text.endswith("▮"):
       self.label_1.text = self.label_1.text[:-1]

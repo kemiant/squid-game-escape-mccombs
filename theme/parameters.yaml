@@ -309,3 +309,4 @@ roles:
 - {name: 'fixed-bottom-image '}
 - {name: overlay-text}
 - {name: image-container}
+- {name: fade-out}
