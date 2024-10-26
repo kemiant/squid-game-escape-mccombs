@@ -32,12 +32,12 @@ components:
         - event_bindings: {click: instruction_file_click}
           layout_properties: {grid_position: 'MQIQWQ,DFWXKA'}
           name: instruction_file
-          properties: {border: '', role: outlineSix, text: Instruction}
+          properties: {background: '#ba60c7', border: '', role: null, text: Instruction}
           type: Button
         - event_bindings: {click: csv_file_click}
           layout_properties: {grid_position: 'MQIQWQ,WFIZKK'}
           name: csv_file
-          properties: {role: outlineSix, text: CSV File}
+          properties: {background: '#b259c0', border: 'border: 2px solid #ae35c0;', role: outlineSix, text: CSV File}
           type: Button
         data_bindings: []
         layout_properties: {width: 827.7925937499999}
@@ -51,12 +51,12 @@ components:
     - components:
       - layout_properties: {grid_position: 'ERRJNL,ZEFZIZ'}
         name: text_box_1
-        properties: {placeholder: Find the creator and end the game, role: terminal-textbox, spacing_above: medium, spacing_below: medium}
+        properties: {background: '#ba60c7', foreground: '#ffffff', placeholder: Find the creator and end the game, role: null, spacing_above: medium, spacing_below: medium}
         type: TextBox
       - event_bindings: {click: submit_click}
         layout_properties: {full_width_row: true, grid_position: 'ERRJNL,FGJCSU'}
         name: Submit
-        properties: {align: center, background: '#c783d2', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '', icon: '', icon_align: left, italic: false, role: filled, spacing_above: medium, spacing_below: medium, text: Submit Name, tooltip: '', underline: false, visible: true}
+        properties: {align: center, background: '#c783d2', bold: false, border: '', enabled: true, font: '', font_size: null, foreground: '#f9d8fd', icon: '', icon_align: left, italic: false, role: filled, spacing_above: medium, spacing_below: medium, text: Submit Name, tooltip: '', underline: false, visible: true}
         type: Button
       layout_properties: {grid_position: 'OYHVEP,GGLXSP'}
       name: card_3
