@@ -22,7 +22,7 @@ class P5_Marbles(P5_MarblesTemplate):
     self.total_time = 0
     self.begin_time = False
     self.stay_alive = 0
-    questions_dict = {
+    self.questions = {
       "question": "Find the game with the highest survival rate.",
       "question": "List all games where the survival rate is above 50%. (Count)",
       "question": "How many games have a difficulty rating of 8 or higher?",
@@ -126,7 +126,6 @@ class P5_Marbles(P5_MarblesTemplate):
       #make sure to add these to each puzzle
       self.card_2.visible =True
       self.card_3.visible =True
-      self.card_4.visible =True
       anvil.server.call_s('start_timer', 'p5_start')
       self.begin_time = True
       self.time_elapsed.visible = True

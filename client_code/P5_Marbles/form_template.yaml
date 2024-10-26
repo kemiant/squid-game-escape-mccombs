@@ -27,7 +27,7 @@ components:
         type: Button
       data_bindings: []
       layout_properties: {grid_position: 'LESVAU,OVNDWD'}
-      name: card_2_copy
+      name: card_3
       properties: {role: bordered-section, visible: false}
       type: ColumnPanel
     - components:
