@@ -8,6 +8,7 @@ import anvil.server
 from anvil import Timer
 import anvil.js
 import time
+from anvil_extras.animation import animate, fade_out, Easing, Effect
 
 class P1_Red_Light(P1_Red_LightTemplate):
   def __init__(self, **properties):
@@ -54,16 +55,18 @@ Click the button below to get hacking and stay alive!
     self.begin_time = False
     self.stay_alive = 0
     self.image_2.visible= False
+    self.image_1.visible= True
 
   def type_text(self):
     # Remove cursor if it's there
     
-    time.sleep(4.5)
     #instead
-    self.image_1.role = "fade-out"
-    
+    #leave_effect = Effect(fade_out, duration=5500, easing=Easing.ease_out)
+    #leave_effect.animate(self.image_1).wait()
+    #self.image_1.remove_from_parent()
+    time.sleep(4.5)
     #instead of doing false
-    #self.image_1.visible= False
+    self.image_1.visible= False
     self.image_2.visible= True
     if self.label_1.text.endswith("▮"):
       self.label_1.text = self.label_1.text[:-1]

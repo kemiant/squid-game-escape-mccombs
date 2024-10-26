@@ -3,15 +3,15 @@ components:
   - components:
     - layout_properties: {}
       name: image_1
-      properties: {height: 73.6666259765625, source: _/theme/Visuals/Banners/GlassBridgeBanner.png}
+      properties: {display_mode: zoom_to_fill, height: 73.6666259765625, source: _/theme/Visuals/Banners/GlassBridgeBanner.png}
       type: Image
     layout_properties: {grid_position: 'RRCRWR,DSIHTE'}
     name: linear_panel_1
     properties: {}
     type: LinearPanel
-  - layout_properties: {grid_position: 'SMODAG,CZTYGH'}
+  - layout_properties: {full_width_row: true, grid_position: 'SMODAG,CZTYGH'}
     name: image_2
-    properties: {height: 456.6666564941406, source: _/theme/Visuals/Animations/Glass_Door.gif}
+    properties: {display_mode: zoom_to_fill, height: 456.6666564941406, source: _/theme/Visuals/Animations/Glass_Door.gif}
     type: Image
   - components:
     - components:
@@ -65,8 +65,12 @@ components:
         type: Button
       layout_properties: {grid_position: 'OYHVEP,GGLXSP'}
       name: card_3
-      properties: {background: '', border: '', col_spacing: medium, col_widths: '{"FGJCSU":15,"OPSUJK":10}', foreground: '', role: bordered-section, spacing_above: small, spacing_below: small, tooltip: '', visible: false, wrap_on: mobile}
+      properties: {background: '', border: '', col_spacing: medium, col_widths: '{"FGJCSU":15}', foreground: '', role: bordered-section, spacing_above: small, spacing_below: small, tooltip: '', visible: false, wrap_on: mobile}
       type: ColumnPanel
+    - layout_properties: {full_width_row: true, grid_position: 'AQLZFK,OXJPNE'}
+      name: image_1_copy
+      properties: {display_mode: zoom_to_fill, height: 73.6666259765625, source: _/theme/Visuals/Banners/GlassBridgeBanner.png}
+      type: Image
     layout_properties: {grid_position: 'UKAQRK,JJALDL'}
     name: column_panel_1
     properties: {background: '', border: '', col_spacing: medium, col_widths: '{"KRXVIO":15,"AGUPQG":45}', foreground: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}

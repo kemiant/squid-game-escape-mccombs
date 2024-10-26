@@ -39,6 +39,8 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
     self.stay_alive = 0
 
   def type_text(self):
+    time.sleep(4.5)
+    self.image_2.visible = False
     # Remove cursor if it's there
     if self.label_1.text.endswith("▮"):
       self.label_1.text = self.label_1.text[:-1]
