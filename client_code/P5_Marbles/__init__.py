@@ -67,3 +67,23 @@ class P5_Marbles(P5_MarblesTemplate):
     combination_value = self.combination_lock_form.get_combination()
     if anvil.server.call_s("", combination_value):
       open_form("")
+
+  def csv_file_click(self, **event_args):
+    file_media = anvil.server.call('get_file','Games_CSV')
+    if file_media is not None:
+      anvil.download(file_media)
+      #if need to download more put here
+      file_media = anvil.server.call('get_file','rounds_csv')
+      anvil.download(file_media)
+    else:
+      notification = "The file could not be found."
+      anvil.alert(notification)
+
+
+  def db_file_click(self, **event_args):
+    file_media = anvil.server.call('get_file','sqlite_all_files')
+    if file_media is not None:
+      anvil.download(file_media)
+    else:
+      notification = "The file could not be found."
+      anvil.alert(notification)
