@@ -8,7 +8,7 @@ import anvil.server
 from anvil import Timer
 import anvil.js
 import time
-from anvil_extras.animation import animate, fade_out, Easing, Effect
+#from anvil_extras.animation import animate, fade_out, Easing, Effect
 
 class P1_Red_Light(P1_Red_LightTemplate):
   def __init__(self, **properties):

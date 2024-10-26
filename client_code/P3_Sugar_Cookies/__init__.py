@@ -122,7 +122,5 @@ Use the resources available by clicking the button below. Follow the data carefu
       notification = "The file could not be found."
       anvil.alert(notification)
 
-  def form_show(self, **event_args):
-    """This method is called when the form is shown on the page"""
-    self.call_js('disableSpinner')
+
 
