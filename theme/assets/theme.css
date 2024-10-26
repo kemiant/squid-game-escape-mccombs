@@ -777,4 +777,10 @@ input[disabled] ~ span {
 }
 
 
+.left-nav {
+    background: #8B0000;  /* Deep Cherry Red */
+    color: #ffffff;             /* Optional: Set text color to white */
+}
+
+
 

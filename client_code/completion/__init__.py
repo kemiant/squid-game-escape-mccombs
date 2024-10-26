@@ -29,7 +29,7 @@ Thank you for your incredible dedication and for seeing this through to the end.
     self.current_position = 0
     # Start the typing effect
     anvil.js.call_js('startTypingEffect', self.type_text)
-    self.card_3.visible = True
+
 
   def type_text(self):
     # Remove cursor if it's there
