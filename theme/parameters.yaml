@@ -310,3 +310,4 @@ roles:
 - {name: overlay-text}
 - {name: image-container}
 - {name: loadingSpinner}
+- {name: outlineSix}

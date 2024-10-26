@@ -796,3 +796,9 @@ input[disabled] ~ span {
     background-size: cover;
 }
 
+.anvil-role-outlineSix {
+    border: 4px solid #ba60c7 ;
+    border-radius: 10px;
+    background-color: #d39bce ;
+    color: #ba60c7;
+}
