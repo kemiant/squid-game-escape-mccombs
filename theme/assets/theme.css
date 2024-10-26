@@ -727,6 +727,7 @@ input[disabled] ~ span {
     color: #8c601d;
 }
 
+
 .anvil-role-bannerSpan {
     width: 120%; /* Make the image wider than the window */
     height: 600px; /* Set a height for the banner */
@@ -768,37 +769,12 @@ input[disabled] ~ span {
     text-align: center;
 }
 
-
-/* Fade-out animation */
-.anvil-spinner {
-    display: none; /* Ensures spinner is hidden by default */
-    position: fixed;
-    z-index: 9999;
-    top: 50%;
-    left: 50%;
-    width: 100px;  /* Width of your custom spinner */
-    height: 100px; /* Height of your custom spinner */
-    margin: -50px 0 0 -50px;
-    background-image: url('_/theme/Visuals/Animations/Dalgona_Loading.gif'); /* Custom spinner from Assets */
-    background-size: cover;
-}
-
-#loadingSpinner {
-    display: none; /* Ensures spinner is hidden by default */
-    position: fixed;
-    z-index: 9999;
-    top: 50%;
-    left: 50%;
-    width: 100px;  /* Width of your custom spinner */
-    height: 100px; /* Height of your custom spinner */
-    margin: -50px 0 0 -50px;
-    background-image: url('_/theme/Visuals/Animations/Dalgona_Loading.gif'); /* Custom spinner from Assets */
-    background-size: cover;
-}
-
 .anvil-role-outlineSix {
     border: 4px solid #ba60c7 ;
     border-radius: 10px;
     background-color: #d39bce ;
     color: #ba60c7;
 }
+
+
+

@@ -42,7 +42,7 @@ components:
         data_bindings: []
         layout_properties: {width: 827.7925937499999}
         name: card_2
-        properties: {role: bordered-section, visible: false}
+        properties: {role: null, visible: false}
         type: ColumnPanel
       layout_properties: {grid_position: 'PJPHYT,AGUPQG'}
       name: flow_panel_1
