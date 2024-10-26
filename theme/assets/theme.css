@@ -770,14 +770,20 @@ input[disabled] ~ span {
 
 
 /* Fade-out animation */
-
-/* #loadingSpinner {
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    background-image:'_/theme/Visuals/Animations/Marble_Loading.gif'; /* Or the URL of your image */ /*}*/ 
-
 .anvil-spinner {
+    display: none; /* Ensures spinner is hidden by default */
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    width: 100px;  /* Width of your custom spinner */
+    height: 100px; /* Height of your custom spinner */
+    margin: -50px 0 0 -50px;
+    background-image: url('_/theme/Visuals/Animations/Dalgona_Loading.gif'); /* Custom spinner from Assets */
+    background-size: cover;
+}
+
+#loadingSpinner {
     display: none; /* Ensures spinner is hidden by default */
     position: fixed;
     z-index: 9999;

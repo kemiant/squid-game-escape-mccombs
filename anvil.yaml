@@ -79,6 +79,7 @@ native_deps:
 package_name: Squid_Game_Escape_McCombs
 runtime_options:
   client_version: '3'
+  server_persist: true
   server_spec: null
   server_spec_disabled: {base: python310-minimal, requirements: ''}
   server_version: python3-full
@@ -90,5 +91,5 @@ services:
 - client_config: {allow_remember_me: true, allow_signup: false, confirm_email: true, enable_automatically: true, remember_me_days: 0.3333, use_email: true}
   server_config: {user_table: users}
   source: /runtime/services/anvil/users.yml
-startup: {module: P3_Sugar_Cookies, type: form}
+startup: {module: P4_Tug_War, type: form}
 startup_form: null

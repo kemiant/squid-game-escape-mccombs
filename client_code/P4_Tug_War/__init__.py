@@ -37,9 +37,15 @@ The game is rigged against them, but the right combination of 6 players could be
     self.total_time = 0
     self.begin_time = False
     self.stay_alive = 0
+    self.still.visible = False
+    self.animated.visible = False
+    
 
   def type_text(self):
     # Remove cursor if it's there
+    time.sleep(3)
+    self.image_1.visible = False
+    self.still.visible = True
     if self.label_1.text.endswith("▮"):
       self.label_1.text = self.label_1.text[:-1]
 
@@ -81,10 +87,23 @@ The game is rigged against them, but the right combination of 6 players could be
   def submit_click(self, **event_args):
     combination_value = self.combination_lock_1.get_combination()
     if anvil.server.call_s('p4_check',combination_value):
+      self.animated.visible = True
+      self.still.visible = False
+      time.sleep(4)
+      self.animated.style['filter'] = 'hue-rotate(120deg)'
+      Notification(f"Team Positions Simulation Passed! Moving to next stage...").show()
+      time.sleep(3)
       open_form('P5_Marbles')
     else:
       self.combination_lock_1.clear_values()
       self.combination_lock_1.flash_effect()
+      self.animated.visible = True
+      self.still.visible = False
+      time.sleep(4)
+      self.animated.style['filter'] = 'hue-rotate(0deg)'
+      Notification(f"Team Positions Simulation Failed! Try again...").show()
+      self.animated.visible = False
+      self.still.visible = True
       
   def instruction_file_click(self, **event_args):
     file_media = anvil.server.call('get_file','p4_file')
