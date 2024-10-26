@@ -108,6 +108,7 @@ components:
   properties: {background: '#fbebd5', role: card, visible: false}
   type: ColumnPanel
 container:
+  event_bindings: {show: form_show}
   properties: {background: '#fbebd5', foreground: '', html: '@theme:standard-page.html', visible: true}
   type: HtmlTemplate
 is_package: true

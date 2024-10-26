@@ -13,6 +13,7 @@ class P3_Sugar_Cookies(P3_Sugar_CookiesTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    
     self.text_to_display1 = """Welcome to the Sugar Cookie Game
 You’ve entered one of the most delicate challenges in Squid Game: the Sugar Cookie Game. To survive, you must select a shape to cut from a brittle sugar cookie. But the wrong choice could be your downfall.
 
@@ -37,6 +38,8 @@ Use the resources available by clicking the button below. Follow the data carefu
     self.total_time = 0
     self.begin_time = False
     self.stay_alive = 0
+    
+    
 
   def type_text(self):
     # Remove cursor if it's there
@@ -118,4 +121,8 @@ Use the resources available by clicking the button below. Follow the data carefu
     else:
       notification = "The file could not be found."
       anvil.alert(notification)
+
+  def form_show(self, **event_args):
+    """This method is called when the form is shown on the page"""
+    self.call_js('disableSpinner')
 
