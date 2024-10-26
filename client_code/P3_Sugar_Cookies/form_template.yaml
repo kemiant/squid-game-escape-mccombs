@@ -65,10 +65,14 @@ components:
       name: card_3
       properties: {background: '', border: '', col_spacing: medium, col_widths: '{"FGJCSU":15}', foreground: '', role: bordered-section, spacing_above: small, spacing_below: small, tooltip: '', visible: false, wrap_on: mobile}
       type: ColumnPanel
-    layout_properties: {grid_position: 'UKAQRK,JJALDL'}
+    layout_properties: {grid_position: 'UKAQRK,JJALDL IMQTPJ,RDGPGO'}
     name: column_panel_1
     properties: {background: '', border: '', col_spacing: medium, col_widths: '{"AGUPQG":45}', foreground: '', role: null, spacing_above: small, spacing_below: small, tooltip: '', visible: true, wrap_on: mobile}
     type: ColumnPanel
+  - layout_properties: {grid_position: 'UKAQRK,JJALDL RGSBRW,PMYRRU'}
+    name: image_3
+    properties: {role: loadingSpinner, source: _/theme/Visuals/Animations/Dalgona_Loading.gif, visible: false}
+    type: Image
   - components:
     - layout_properties: {}
       name: image_2
