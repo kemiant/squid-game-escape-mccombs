@@ -100,10 +100,10 @@ Click the button below to get hacking and stay alive!
 
   
   def submit_click(self, **event_args):
-    hash_object = hashlib.sha256(password.encode()).hexdigest()
-    return hash_object
-    if anvil.server.call_s('p1_check',self.text_box_1.text):
-      open_form('P2_Glass_Steps')
+    if self.find_hash(self.text_box_1.text) == ""
+    
+    #if anvil.server.call_s('p1_check',self.text_box_1.text):
+    #  open_form('P2_Glass_Steps')
     else:
       alert("We tried inputting that password, but it did not work")
       

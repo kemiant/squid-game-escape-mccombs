@@ -149,17 +149,9 @@ def p4_check(entry):
      return False  
 
 
-#don't need possibly
-@anvil.server.callable
-def p5_check(entry):
-   if entry == "943YJXTKJLPFK":
-     return True
-   else:
-     return False  
-
 @anvil.server.callable
 def p6_check(entry):
-   if entry == "943YJXTKJLPFK":
+   if entry == "Jin Ha":
      return True
    else:
      return False  
