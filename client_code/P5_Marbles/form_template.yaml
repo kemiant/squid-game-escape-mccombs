@@ -93,6 +93,10 @@ components:
   name: timer_1
   properties: {interval: 1}
   type: Timer
+- layout_properties: {slot: logo}
+  name: image_3
+  properties: {height: 60.5546875, source: _/theme/Logo.png}
+  type: Image
 container:
   properties: {background: '#8d3400', html: '@theme:standard-page.html'}
   type: HtmlTemplate

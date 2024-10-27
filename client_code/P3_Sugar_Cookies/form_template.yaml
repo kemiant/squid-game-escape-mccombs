@@ -107,6 +107,10 @@ components:
   name: card_4
   properties: {background: '#fbebd5', role: card, visible: false}
   type: ColumnPanel
+- layout_properties: {slot: logo}
+  name: image_3_copy
+  properties: {height: 60.5546875, source: _/theme/Logo.png}
+  type: Image
 container:
   event_bindings: {}
   properties: {background: '#fbebd5', foreground: '', html: '@theme:standard-page.html', visible: true}

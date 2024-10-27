@@ -187,10 +187,7 @@ Will you gather the 10 marbles in time, or will the participant’s journey end 
       anvil.server.call_s('stay_alive')
 
   
-  def submit_click(self, **event_args):
-    combination_value = self.combination_lock_form.get_combination()
-    if anvil.server.call_s("", combination_value):
-      open_form("")
+
 
   def csv_file_click(self, **event_args):
     file_media = anvil.server.call('get_file','Games_CSV')
