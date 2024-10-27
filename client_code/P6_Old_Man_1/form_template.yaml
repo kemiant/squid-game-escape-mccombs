@@ -34,11 +34,6 @@ components:
           name: instruction_file
           properties: {background: '#ba60c7', border: '', role: null, text: Instruction}
           type: Button
-        - event_bindings: {click: csv_file_click}
-          layout_properties: {grid_position: 'MQIQWQ,WFIZKK'}
-          name: csv_file
-          properties: {background: '#b259c0', border: 'border: 2px solid #ae35c0;', role: outlineSix, text: CSV File}
-          type: Button
         data_bindings: []
         layout_properties: {width: 827.7925937499999}
         name: card_2
