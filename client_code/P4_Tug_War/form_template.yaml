@@ -73,11 +73,11 @@ components:
     type: Image
   - layout_properties: {grid_position: 'NOMOTH,VYZRKF'}
     name: sim_win
-    properties: {role: null, source: _/theme/Visuals/Banners/sim win.png}
+    properties: {role: null, source: _/theme/Visuals/Animations/WINNING_ANIMATION.gif}
     type: Image
   - layout_properties: {grid_position: 'BLZADH,MENNVY'}
     name: sim_fail
-    properties: {role: null, source: _/theme/Visuals/Banners/sim_fail.png}
+    properties: {role: null, source: _/theme/Visuals/Animations/LOSING_ANIMATION.gif}
     type: Image
   - layout_properties: {grid_position: 'CUSDAV,ASIPQE'}
     name: image_1
