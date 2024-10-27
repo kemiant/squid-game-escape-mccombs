@@ -8,7 +8,6 @@ import anvil.server
 from anvil import Timer
 import anvil.js
 import time
-import hashlib
 #from anvil_extras.animation import animate, fade_out, Easing, Effect
 
 class P1_Red_Light(P1_Red_LightTemplate):
@@ -94,16 +93,17 @@ Click the button below to get hacking and stay alive!
       self.time_elapsed.visible = True
       
 
-  def find_hash(self, password):
-    hash_object = hashlib.sha256(password.encode()).hexdigest()
-    return hash_object
+  #def find_hash(self, password):
+    #hash_object = hashlib.sha256(password.encode()).hexdigest()
+    #return hash_object
 
   
   def submit_click(self, **event_args):
-    if self.find_hash(self.text_box_1.text) == ""
+    #if self.find_hash(self.text_box_1.text) == "":
+     # open_form("P2_Glass_Steps")
     
-    #if anvil.server.call_s('p1_check',self.text_box_1.text):
-    #  open_form('P2_Glass_Steps')
+    if anvil.server.call_s('p1_check',self.text_box_1.text):
+      open_form('P2_Glass_Steps')
     else:
       alert("We tried inputting that password, but it did not work")
       
