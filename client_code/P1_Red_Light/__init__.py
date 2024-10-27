@@ -21,7 +21,7 @@ Right now, Player 48 is in the "Red Light, Green Light" stage, where every movem
 Your Mission:
 
 Locate the Password: The password is buried deep within the system, hidden in the data stream. Extract the critical information before the doll turns around.
-Maintain Stealth: The giant doll monitors every movement. Stay still whenever the room goes red. Failing to do so will expose your connection.
+Maintain Stealth: The giant doll monitors every movement. Stay still whenever you hear music playing. Failing to do so will expose your connection.
 Hack the Mainframe: Use the password to unlock the database. Once you’re in, you’ll have access to vital information for the next games.
 Time is of the essence. The guards are watching, and the doll could turn around at any moment. Stay vigilant.
 
@@ -37,7 +37,7 @@ Click the button below to get hacking and stay alive!
 
 <ul>
     <li>Locate the <strong>Password</strong>: The password is buried deep within the system, hidden in the data stream. Extract the critical information before the doll turns around.</li>
-    <li>Maintain <strong>Stealth</strong>: The giant doll monitors every movement. Stay still whenever the room goes red. Failing to do so will expose your connection.</li>
+    <li>Maintain <strong>Stealth</strong>: The giant doll monitors every movement. Stay still whenever you hear music playing. Failing to do so will expose your connection.</li>
     <li><strong>Hack the Mainframe</strong>: Use the password to unlock the database. Once you’re in, you’ll have access to vital information for the next games.</li>
 </ul>
 
