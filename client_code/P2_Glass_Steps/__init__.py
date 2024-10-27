@@ -8,6 +8,7 @@ import anvil.server
 from anvil import Timer
 import anvil.js
 import time
+from .. import global_vars
 
 
 class P2_Glass_Steps(P2_Glass_StepsTemplate):
@@ -37,6 +38,7 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
     self.total_time = 0
     self.begin_time = False
     self.stay_alive = 0
+    
 
   def type_text(self):
     time.sleep(4.5)

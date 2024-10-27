@@ -114,13 +114,5 @@ Use the resources available by clicking the button below. Follow the data carefu
       anvil.alert(notification)
 
 
-  def db_file_click(self, **event_args):
-    file_media = anvil.server.call('get_file','sqlite_all_files')
-    if file_media is not None:
-      anvil.download(file_media)
-    else:
-      notification = "The file could not be found."
-      anvil.alert(notification)
-
 
 

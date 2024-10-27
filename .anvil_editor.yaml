@@ -47,7 +47,8 @@ unique_ids:
     Welcome_Part1: '1729923618762564620223053.1372'
     combination_lock: '1729521488930892902966162.3527'
     completion: '1729559899956485009067227.14923'
-  modules: {}
+  modules:
+    global_vars: '1730061965469613806248293.9415'
   scripts: {}
   server_modules:
     ServerModule1: '1729468308726967370095503.7377'
