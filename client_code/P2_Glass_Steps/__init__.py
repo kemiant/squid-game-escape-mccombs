@@ -9,6 +9,7 @@ from anvil import Timer
 import anvil.js
 import time
 from .. import global_vars
+import hashlib
 
 
 class P2_Glass_Steps(P2_Glass_StepsTemplate):
@@ -82,16 +83,28 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
       anvil.server.call_s('stay_alive')
       
   def submit_click(self, **event_args):
-    if anvil.server.call_s('p2_check',self.text_box_1.text):
+    def find_hash(password):
+      hash_object = hashlib.sha256(password.encode()).hexdigest()
+      return hash_object]
+
+    if find_hash(self.text_box_1.text) == '632060b020c386a002fdf1755da6d0eb14ffd26526f9dca886f375c6df5323f3':
       open_form('P3_Sugar_Cookies')
     else:
       alert("We tried inputting that password, but it did not work")
 
   def text_box_1_pressed_enter(self, **event_args):
-    if anvil.server.call_s('p2_check',self.text_box_1.text):
+    def find_hash(password):
+      hash_object = hashlib.sha256(password.encode()).hexdigest()
+      return hash_object]
+
+    if find_hash(self.text_box_1.text) == '632060b020c386a002fdf1755da6d0eb14ffd26526f9dca886f375c6df5323f3':
       open_form('P3_Sugar_Cookies')
     else:
       alert("We tried inputting that password, but it did not work")
+    # if anvil.server.call_s('p2_check',self.text_box_1.text):
+    #   open_form('P3_Sugar_Cookies')
+    # else:
+    #   alert("We tried inputting that password, but it did not work")
       
   def csv_file_click(self, **event_args):
     file_media = anvil.server.call('get_file','Players_CSV')

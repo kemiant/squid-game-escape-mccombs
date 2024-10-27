@@ -13,7 +13,7 @@ components:
       - event_bindings: {click: button_1_click}
         layout_properties: {col_xs: 3, row: YISEOM, width_xs: 6}
         name: button_1
-        properties: {text: Enter}
+        properties: {text: Enter, visible: false}
         type: Button
       layout_properties: {grid_position: 'DVPCRC,KHKBHO'}
       name: grid_panel_1

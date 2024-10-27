@@ -34,6 +34,7 @@ Do you have what it takes? Will you risk it all for a chance at glory and unimag
     else:
       # Stop the typing effect
       anvil.js.call_js("stopTypingEffect")
+      self.button_1.visible = True
     # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):

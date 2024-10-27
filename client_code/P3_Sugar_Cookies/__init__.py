@@ -8,6 +8,7 @@ import anvil.server
 from anvil import Timer
 import anvil.js
 import time
+import hashlib
 
 class P3_Sugar_Cookies(P3_Sugar_CookiesTemplate):
   def __init__(self, **properties):

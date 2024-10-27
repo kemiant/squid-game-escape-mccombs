@@ -9,6 +9,7 @@ from anvil import Timer
 import anvil.js
 import time
 from . import global_vars
+import hashlib
 #from anvil_extras.animation import animate, fade_out, Easing, Effect
 
 class P1_Red_Light(P1_Red_LightTemplate):
@@ -92,28 +93,34 @@ Click the button below to get hacking and stay alive!
       anvil.server.call_s('start_timer', 'p1_start')
       self.begin_time = True
       self.time_elapsed.visible = True
-      
-
-  #def find_hash(self, password):
-    #hash_object = hashlib.sha256(password.encode()).hexdigest()
-    #return hash_object
 
   
   def submit_click(self, **event_args):
-    #if self.find_hash(self.text_box_1.text) == "":
-     # open_form("P2_Glass_Steps")
-    
-    if anvil.server.call_s('p1_check',self.text_box_1.text):
-      open_form('P2_Glass_Steps')
-    else:
-      alert("We tried inputting that password, but it did not work")
-      
-  def text_box_1_pressed_enter(self, **event_args):
-    if anvil.server.call_s('p1_check',self.text_box_1.text):
+
+    def find_hash(password):
+      hash_object = hashlib.sha256(password.encode()).hexdigest()
+      return hash_object
+
+    if find_hash(self.text_box_1.text) == '5d528a3f5f46ce403d13f436bf57791e9a9a4e66db011241331f7662fa43ffd4':
       open_form('P2_Glass_Steps')
     else:
       alert("We tried inputting that password, but it did not work")
 
+    # past code:: --- 
+    # if anvil.server.call_s('p1_check',self.text_box_1.text):
+    #   open_form('P2_Glass_Steps')
+    # else:
+    #   alert("We tried inputting that password, but it did not work")
+      
+  def text_box_1_pressed_enter(self, **event_args):
+    def find_hash(password):
+      hash_object = hashlib.sha256(password.encode()).hexdigest()
+      return hash_object
+
+    if find_hash(self.text_box_1.text) == '5d528a3f5f46ce403d13f436bf57791e9a9a4e66db011241331f7662fa43ffd4':
+      open_form('P2_Glass_Steps')
+    else:
+      alert("We tried inputting that password, but it did not work")
   
 
   
