@@ -35,7 +35,7 @@ But the shapes alone will not guide you. Hidden in the very letters of this mess
   
   <p>But the shapes alone will not guide you. Hidden in the very letters of this message lies another truth, one you cannot see but can feel—a rhythm that taps, clicks, and pauses. Once unlocked, find the room to where the truth leads to, and then the shapes will help you from there on.</p>
   
-  <pre>--. ... -...   ...-- .---- ..--- ---..</pre>
+  <p>--. ... -...   ...-- .---- ..--- ---..</p>
   <p><strong>____________</strong></p>
 """
     # Counter for the position of next character to display
