@@ -16,7 +16,7 @@ class P3_Sugar_Cookies(P3_Sugar_CookiesTemplate):
     self.init_components(**properties)
     
     self.text_to_display1 = """The Hidden Puzzle
-…._______________________________….
+….___________________________________________________________________________________________________________________________________________________________….
 The path ahead is not as simple as it seems. Three symbols are known, but one is missing—a shape that holds the key to your survival. To find the next clue, you must first discover what this elusive shape is and where it leads.
 Clue 1:
 “Three shapes are bound to the earth, their edges familiar. But a fourth rises above, guiding those who seek it when the world fades to black.”
@@ -24,19 +24,20 @@ The circle, the triangle, and the square—these shapes have been seen before. Y
 But the shapes alone will not guide you. Hidden in the very letters of this message lies another truth, one you cannot see but can feel—a rhythm that taps, clicks, and pauses. Once unlocked, find the room to where the truth leads to, and then the shapes will help you from there on.
 --. ... -...   ...-- .---- ..--- ---..          ____________…
 """
-    self.text_to_display2 = """  <h2>The Hidden Puzzle</h2>
+    self.text_to_display2 = """  
+    <p>--. ... -...   ...-- .---- ..--- ---..                        ________________________________________________________________________</p>
+    <h2>The Hidden Puzzle</h2>
   <hr>
   <p>The path ahead is not as simple as it seems. Three symbols are known, but one is missing—a shape that holds the key to your survival. To find the next clue, you must first discover what this elusive shape is and where it leads.</p>
-  
+  <br>
   <h3>Clue 1:</h3>
   <p><em>“Three shapes are bound to the earth, their edges familiar. But a fourth rises above, guiding those who seek it when the world fades to black.”</em></p>
   
   <p>The circle, the triangle, and the square—these shapes have been seen before. Yet, there is one more, one that stands above them all.</p>
   
-  <p>But the shapes alone will not guide you. Hidden in the very letters of this message lies another truth, one you cannot see but can feel—a rhythm that taps, clicks, and pauses. Once unlocked, find the room to where the truth leads to, and then the shapes will help you from there on.</p>
-  
-  <p>--. ... -...   ...-- .---- ..--- ---..</p>
-  <p><strong>____________</strong></p>
+  <p>But the shapes alone will not guide you. Hidden in the very letters of this message lies another truth, one you cannot see but can feel—a rhythm that taps, clicks, and pauses. The hidden message will lead you to a room, find the room to where the truth leads to, and then tell the shape to the guard and they will help you from there on.</p>
+  <br>
+  <p>--. ... -...   ...-- .---- ..--- ---..                        ________________________________________________________________________</p>
 """
     # Counter for the position of next character to display
     self.current_position = 0
@@ -67,7 +68,7 @@ But the shapes alone will not guide you. Hidden in the very letters of this mess
       self.rich_text_1.visible = True
       self.rich_text_1.content = self.text_to_display2
       #make sure to add these to each puzzle
-      self.card_2.visible =True
+     # self.card_2.visible =True
       self.card_3.visible =True
       self.card_4.visible =True
       anvil.server.call_s('start_timer', 'p3_start')
