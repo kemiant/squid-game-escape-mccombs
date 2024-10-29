@@ -31,6 +31,8 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
 <p>Your mission is clear: <strong>clean the data</strong> and extract the vital information needed to save Player 48. Each step you take in the data cleaning process brings you closer to identifying the correct glass tiles they must step on.</p>
 
 <p>The fate of Player 48 is in your hands. The clock is ticking, and the glass bridge is waiting. Will your data cleaning skills be enough to lead them safely across?</p>
+
+<p>Input each player ID position in the same order with no spaces.</p>
 """
     # Counter for the position of next character to display
     self.current_position = 0
@@ -85,7 +87,7 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
   def submit_click(self, **event_args):
     def find_hash(password):
       hash_object = hashlib.sha256(password.encode()).hexdigest()
-      return hash_object]
+      return hash_object
 
     if find_hash(self.text_box_1.text) == '632060b020c386a002fdf1755da6d0eb14ffd26526f9dca886f375c6df5323f3':
       open_form('P3_Sugar_Cookies')
@@ -95,7 +97,7 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
   def text_box_1_pressed_enter(self, **event_args):
     def find_hash(password):
       hash_object = hashlib.sha256(password.encode()).hexdigest()
-      return hash_object]
+      return hash_object
 
     if find_hash(self.text_box_1.text) == '632060b020c386a002fdf1755da6d0eb14ffd26526f9dca886f375c6df5323f3':
       open_form('P3_Sugar_Cookies')
