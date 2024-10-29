@@ -3,7 +3,6 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-import hashlib
 # This is a module.
 # You can define variables and functions here, and use them from any form. For example, in a top-level form:
 #
@@ -11,13 +10,12 @@ import hashlib
 #
 #    Module1.say_hello()
 #
-
-total_time = 0
+def hash_func(input_string):
+    hash_value = 0
+    for char in input_string:
+        # Update the hash value by left-shifting and adding the character code
+        hash_value = (hash_value * 31 + ord(char)) & 0xFFFFFFFF  # Limits to 32-bit integer
+    return hash_value
 
 def say_hello():
   print("Hello, world")
-
-
-def find_hash(password):
-    hash_object = hashlib.sha256(password.encode()).hexdigest()
-    return hash_object

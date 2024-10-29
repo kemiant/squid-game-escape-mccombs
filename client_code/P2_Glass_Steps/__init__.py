@@ -8,8 +8,7 @@ import anvil.server
 from anvil import Timer
 import anvil.js
 import time
-from .. import global_vars
-import hashlib
+from .. import HashingFunction
 
 
 class P2_Glass_Steps(P2_Glass_StepsTemplate):
@@ -85,21 +84,13 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
       anvil.server.call_s('stay_alive')
       
   def submit_click(self, **event_args):
-    def find_hash(password):
-      hash_object = hashlib.sha256(password.encode()).hexdigest()
-      return hash_object
-
-    if find_hash(self.text_box_1.text) == '632060b020c386a002fdf1755da6d0eb14ffd26526f9dca886f375c6df5323f3':
+    if HashingFunction.hash_func(self.text_box_1.text) == 4258531534:
       open_form('P3_Sugar_Cookies')
     else:
       alert("We tried inputting that password, but it did not work")
 
   def text_box_1_pressed_enter(self, **event_args):
-    def find_hash(password):
-      hash_object = hashlib.sha256(password.encode()).hexdigest()
-      return hash_object
-
-    if find_hash(self.text_box_1.text) == '632060b020c386a002fdf1755da6d0eb14ffd26526f9dca886f375c6df5323f3':
+    if HashingFunction.hash_func(self.text_box_1.text) == 4258531534:
       open_form('P3_Sugar_Cookies')
     else:
       alert("We tried inputting that password, but it did not work")

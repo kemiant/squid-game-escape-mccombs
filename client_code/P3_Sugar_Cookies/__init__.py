@@ -8,7 +8,7 @@ import anvil.server
 from anvil import Timer
 import anvil.js
 import time
-import hashlib
+from .. import HashingFunction
 
 class P3_Sugar_Cookies(P3_Sugar_CookiesTemplate):
   def __init__(self, **properties):
@@ -89,6 +89,7 @@ But the shapes alone will not guide you. Hidden in the very letters of this mess
 
   
   def submit_click(self, **event_args):
+    if HashingFunction.hash_func(self.text_box_1.text) == 
     if anvil.server.call_s('p3_check',self.text_box_1.text):
       open_form('P4_Tug_War')
     else:

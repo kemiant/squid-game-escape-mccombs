@@ -66,9 +66,11 @@ Good luck, Player 136. The future of Player 48 rests in your hands."""
     response = anvil.server.call('register_or_resume_team', team_name)
     
     # Check the response status
-    if response['status'] == 'resumed':
+    if response['status'] == 'resumed' and response['last_started_form']:
         # The team is resuming, open the last started form
-        open_form(response['last_started_form'])
+      open_form(response['last_started_form'])
     elif response['status'] == 'registered':
         # This is a new team, start with the first challenge
         open_form('P1_Red_Light')
+    else:
+      open_form('P1_Red_Light')
