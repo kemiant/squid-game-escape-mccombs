@@ -89,14 +89,13 @@ But the shapes alone will not guide you. Hidden in the very letters of this mess
 
   
   def submit_click(self, **event_args):
-    if HashingFunction.hash_func(self.text_box_1.text) == 
-    if anvil.server.call_s('p3_check',self.text_box_1.text):
+    if HashingFunction.hash_func(self.text_box_1.text) == 495700216:
       open_form('P4_Tug_War')
     else:
       alert("We tried inputting that password, but it did not work")
 
   def text_box_1_pressed_enter(self, **event_args):
-    if anvil.server.call_s('p3_check',self.text_box_1.text):
+    if HashingFunction.hash_func(self.text_box_1.text) == 495700216:
       open_form('P4_Tug_War')
     else:
       alert("We tried inputting that password, but it did not work")

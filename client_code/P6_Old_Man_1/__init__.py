@@ -8,6 +8,7 @@ import anvil.server
 from anvil import Timer
 import anvil.js
 import time
+from .. import HashingFunction
 
 class P6_Old_Man_1(P6_Old_Man_1Template):
   def __init__(self, **properties):
@@ -78,13 +79,13 @@ The weight of the truth presses down, the room feels colder, more isolated. But 
 
   
   def submit_click(self, **event_args):
-    if anvil.server.call_s('p6_check',self.text_box_1.text):
+    if HashingFunction.hash_func(self.text_box_1.text) == 2218836970:
       open_form('completion')
     else:
       alert("We tried inputting that password, but it did not work")
 
   def text_box_1_pressed_enter(self, **event_args):
-    if anvil.server.call_s('p6_check',self.text_box_1.text):
+    if HashingFunction.hash_func(self.text_box_1.text) == 2218836970:
       open_form('completion')
     else:
       alert("We tried inputting that password, but it did not work")

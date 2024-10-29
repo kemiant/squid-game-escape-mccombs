@@ -8,6 +8,7 @@ import anvil.server
 from anvil import Timer
 import anvil.js
 import time
+from .. import HashingFunction
 
 class P4_Tug_War(P4_Tug_WarTemplate):
   def __init__(self, **properties):
@@ -88,7 +89,7 @@ The game is rigged against them, but the right combination of 6 players could be
   
   def submit_click(self, **event_args):
     combination_value = self.combination_lock_1.get_combination()
-    if anvil.server.call_s('p4_check',combination_value):
+    if HashingFunction.hash_func(combination_value) == 3989186883:
       self.animated.visible = True
       self.still.visible = False
       time.sleep(4)
