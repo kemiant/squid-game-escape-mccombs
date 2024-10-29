@@ -15,19 +15,28 @@ class P3_Sugar_Cookies(P3_Sugar_CookiesTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     
-    self.text_to_display1 = """Welcome to the Sugar Cookie Game
-You’ve entered one of the most delicate challenges in Squid Game: the Sugar Cookie Game. To survive, you must select a shape to cut from a brittle sugar cookie. But the wrong choice could be your downfall.
-
-To give yourself the best chance, you need to create a plot from the database provided to reveal a special shape. This shape is your key—show it to the guard, and you’ll be granted an easier cookie to cut.
-
-Instructions
-Use the resources available by clicking the button below. Follow the data carefully and reveal the shape that will win you favor with the guard. Your survival depends on it."""
-    self.text_to_display2 = """<h2>Welcome to the Sugar Cookie Game</h2>
-
-<p>You’ve entered one of the most delicate challenges in Squid Game: the Sugar Cookie Game. To survive, you must select a shape to cut from a brittle sugar cookie. But the wrong choice could be your downfall.</p>
-
-
-
+    self.text_to_display1 = """The Hidden Puzzle
+…._______________________________….
+The path ahead is not as simple as it seems. Three symbols are known, but one is missing—a shape that holds the key to your survival. To find the next clue, you must first discover what this elusive shape is and where it leads.
+Clue 1:
+“Three shapes are bound to the earth, their edges familiar. But a fourth rises above, guiding those who seek it when the world fades to black.”
+The circle, the triangle, and the square—these shapes have been seen before. Yet, there is one more, one that stands above them all..
+But the shapes alone will not guide you. Hidden in the very letters of this message lies another truth, one you cannot see but can feel—a rhythm that taps, clicks, and pauses. Once unlocked, find the room to where the truth leads to, and then the shapes will help you from there on.
+--. ... -...   ...-- .---- ..--- ---..          ____________…
+"""
+    self.text_to_display2 = """  <h2>The Hidden Puzzle</h2>
+  <hr>
+  <p>The path ahead is not as simple as it seems. Three symbols are known, but one is missing—a shape that holds the key to your survival. To find the next clue, you must first discover what this elusive shape is and where it leads.</p>
+  
+  <h3>Clue 1:</h3>
+  <p><em>“Three shapes are bound to the earth, their edges familiar. But a fourth rises above, guiding those who seek it when the world fades to black.”</em></p>
+  
+  <p>The circle, the triangle, and the square—these shapes have been seen before. Yet, there is one more, one that stands above them all.</p>
+  
+  <p>But the shapes alone will not guide you. Hidden in the very letters of this message lies another truth, one you cannot see but can feel—a rhythm that taps, clicks, and pauses. Once unlocked, find the room to where the truth leads to, and then the shapes will help you from there on.</p>
+  
+  <pre>--. ... -...   ...-- .---- ..--- ---..</pre>
+  <p><strong>____________</strong></p>
 """
     # Counter for the position of next character to display
     self.current_position = 0

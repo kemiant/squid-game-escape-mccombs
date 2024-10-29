@@ -26,7 +26,7 @@ The weight of the truth presses down, the room feels colder, more isolated. But 
 
 <p>The clues are buried deep in the numbers, encoded into decisions, hidden behind walls of data. Your weapons are <strong>linear regression models</strong>, hidden variables, and the ability to connect the invisible threads that others have missed. Somewhere within this maze of data lies the answer to the most dangerous question: <strong>Who controls the game?</strong></p>
 
-<p>The weight of the truth presses down, the room feels colder, more isolated. But the answer is there—just beyond reach. Time is ticking. Can you break the code before it’s too late?</p>
+<p>Find the name of the creator and escape with the money. The weight of the truth presses down, the room feels colder, more isolated. But the answer is there—just beyond reach. Time is ticking. Can you break the code before it’s too late?</p>
 """
     # Counter for the position of next character to display
     self.current_position = 0
