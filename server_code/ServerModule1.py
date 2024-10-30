@@ -151,7 +151,7 @@ def p4_check(entry):
 
 @anvil.server.callable
 def p6_check(entry):
-   if entry == "Jin Ha":
+   if entry == "Kang Yoon":
      return True
    else:
      return False  

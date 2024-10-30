@@ -81,13 +81,13 @@ The weight of the truth presses down, the room feels colder, more isolated. But 
 
   
   def submit_click(self, **event_args):
-    if HashingFunction.hash_func(self.text_box_1.text) == 2218836970:
+    if HashingFunction.hash_func(self.text_box_1.text) == 956053350:
       open_form('completion')
     else:
       alert("We tried inputting that password, but it did not work")
 
   def text_box_1_pressed_enter(self, **event_args):
-    if HashingFunction.hash_func(self.text_box_1.text) == 2218836970:
+    if HashingFunction.hash_func(self.text_box_1.text) == 956053350:
       open_form('completion')
     else:
       alert("We tried inputting that password, but it did not work")

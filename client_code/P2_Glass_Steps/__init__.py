@@ -41,6 +41,7 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
     self.total_time = 0
     self.begin_time = False
     self.stay_alive = 0
+    self.image_2.visible = True
     
 
   def type_text(self):
