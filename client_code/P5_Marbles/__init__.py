@@ -78,36 +78,37 @@ Will you gather the 10 marbles in time, or will the participant’s journey end 
 
     self.repeating_panel_1.items = self.questions
     self.correct_answers = [
-      "Honeycomb/Dalgona",  # Answer to question 1
-      "1",  # Answer to question 2
-      "3",  # Answer to question 3
-      "2",  # Answer to question 4
-      "Marbles",  # Answer to question 5
-      "0.45",  # Answer to question 6
-      "1",  # Answer to question 7
-      "Marbles",  # Answer to question 8
-      "3",  # Answer to question 9
-      "2",  # Answer to question 10
-      "Glass Bridge",  # Answer to question 11
-      "840",  # Answer to question 12
-      "4",  # Answer to question 13
-      "1",  # Answer to question 14
-      "Glass Bridge",  # Answer to question 15
-      "20",  # Answer to question 16
-      "0",  # Answer to question 17
-      "2",  # Answer to question 18
-      "43",  # Answer to question 19
-      "1",  # Answer to question 20
-      "5",  # Answer to question 21
-      "3",  # Answer to question 22
-      "0",  # Answer to question 23
-      "3",  # Answer to question 24
-      "20",  # Answer to question 25
-      "8.6",  # Answer to question 26
-      "4",  # Answer to question 27
-      "1",  # Answer to question 28
-      "0",  # Answer to question 29
-      "247"]  # Answer to question 30
+    'Honeycomb/Dalgona',  # 1. Game with the highest survival rate
+    '1',                  # 2. Count of games where survival rate > 50%
+    '4',                  # 3. Count of games with difficulty >= 8
+    '2',                  # 4. Count of games where max participants > 100
+    'Marbles',            # 5. Game with the lowest difficulty level
+    '0.46',               # 6. Average survival rate across all games
+    '1',                  # 7. Count of games with exactly 100 participants
+    'Marbles',            # 8. Game with the lowest difficulty
+    '2',                  # 9. Count of games with a survival rate < 0.5
+    '3',                  # 10. Count of games with a survival rate of exactly 50%
+    'Squid Game',         # 11. Game with the fewest participants
+    '842',                # 12. Total number of participants across all games
+    '4',                  # 13. Difference in difficulty between hardest and easiest game
+    '1',                  # 14. Count of games with difficulty rating of 7
+    'Glass Bridge',       # 15. Game where survival rate < 0.4
+    '247',                # 16. Round with the highest number of eliminations
+    '37',                 # 17. Count of rounds with more than 20 eliminations
+    '15',                 # 18. Count of rounds from GameID = 4
+    '4861',               # 19. Total number of survivors in all rounds
+    '20',                 # 20. Count of rounds with exactly 1 survivor
+    '30',                 # 21. Count of rounds in January 2024
+    '28',                 # 22. Count of rounds with fewer than 10 survivors
+    '13',                 # 23. Count of rounds with fewer eliminations than survivors
+    '6',                  # 24. Number of unique games in the rounds dataset
+    '209',                # 25. Highest number of survivors in any round
+    '64.8',               # 26. Average number of eliminations per round
+    '20',                 # 27. Count of rounds with exactly 1 elimination
+    '1',                  # 28. Round with the smallest number of survivors
+    '37',                 # 29. Count of rounds with at least 50 eliminations
+    '247' ]                # 30. Highest number of eliminations in a round
+
     self.correct_count = 0
     self.marble_counter.text = f"{self.correct_count} out of 10"
     self.card_2.visible =False
@@ -121,12 +122,14 @@ Will you gather the 10 marbles in time, or will the participant’s journey end 
     # Check if the answer is correct by comparing it to the correct answer
     correct_answer = self.correct_answers[question_index]
     
-    if answer == correct_answer:
+    if (answer == correct_answer) and (question_index != -1):
       self.correct_count += 1
       Notification(f"Correct!").show()
       self.animated.visible =True
       self.still.visible =False
-      self.update_item_index(self.correct_answers[question_index], -1)
+      self.update_item_index(question_index, -1)
+    elif question_index == -1:
+      Notification(f"You have already answered this question.").show()
     else:
       Notification(f"Incorrect.").show()
     

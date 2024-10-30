@@ -6,7 +6,7 @@ components:
     type: Image
   - layout_properties: {grid_position: 'HTXDKP,YNJRMG'}
     name: label_1
-    properties: {foreground: '#f5c024', role: terminal-textbox}
+    properties: {foreground: '#ffbf00', role: terminal-textbox}
     type: Label
   layout_properties: {slot: default}
   name: content_panel

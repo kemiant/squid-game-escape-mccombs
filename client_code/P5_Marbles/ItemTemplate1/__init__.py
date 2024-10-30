@@ -22,8 +22,8 @@ class ItemTemplate1(ItemTemplate1Template):
     answer = self.text_box_1.text
     
     # Send the answer to the main form for storage and correctness check
-    if self.item['item_index'] != -1:
-      get_open_form().store_answer(self.item['item_index'], answer)
+   # if self.item['item_index'] != -1:
+    get_open_form().store_answer(self.item['item_index'], answer)
       #update_item_index(self.item['item_index'], -1)
       #get_open_form().update_item_index(self.item['item_index'], -1)
 
