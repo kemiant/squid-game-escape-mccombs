@@ -24,7 +24,8 @@ class ItemTemplate1(ItemTemplate1Template):
     # Send the answer to the main form for storage and correctness check
     if self.item['item_index'] != -1:
       get_open_form().store_answer(self.item['item_index'], answer)
-      get_open_form().update_item_index(self.item['item_index'], -1)
+      #update_item_index(self.item['item_index'], -1)
+      #get_open_form().update_item_index(self.item['item_index'], -1)
 
   def text_box_1_focus(self, **event_args):
     # Check if the text is still the default text
