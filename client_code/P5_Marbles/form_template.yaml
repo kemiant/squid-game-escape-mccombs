@@ -58,7 +58,7 @@ components:
       type: Label
     layout_properties: {grid_position: 'UKAQRK,NAQACS'}
     name: grid_panel_1
-    properties: {background: '#c1501f'}
+    properties: {background: '#c1501f', spacing_above: large}
     type: GridPanel
   - layout_properties: {full_width_row: false, grid_position: 'ZRGTTA,WZZVRL'}
     name: image_1

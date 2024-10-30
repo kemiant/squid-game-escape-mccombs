@@ -108,7 +108,7 @@ The game is rigged against them, but the right combination of 6 players could be
       time.sleep(3)
       self.animated.visible = False
       self.sim_fail.visible = True
-      time.sleep(2)
+      time.sleep(5)
       Notification(f"Team Positions Simulation Failed! Try again...").show()
       time.sleep(1)
       self.still.visible = True

@@ -37,11 +37,12 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
     # Counter for the position of next character to display
     self.current_position = 0
     # Start the typing effect
+    self.image_2.visible = True
     anvil.js.call_js("startTypingEffect", self.type_text)
     self.total_time = 0
     self.begin_time = False
     self.stay_alive = 0
-    self.image_2.visible = True
+    
     
 
   def type_text(self):

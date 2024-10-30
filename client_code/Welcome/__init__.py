@@ -6,6 +6,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 from .. import Timer
+import time
 
 class Welcome(WelcomeTemplate):
   def __init__(self, **properties):
@@ -16,7 +17,6 @@ Greetings, Player 136.
 
 You’ve been selected to play a dangerous and high-stakes game, not for yourself, but to help Player 48 survive. The rules of the Squid Game may be cruel, but you hold a powerful advantage. As a hacker, your role is to provide guidance and cheats through the complexities ahead. Every line of code you solve brings Player 48 one step closer to victory.
 
-The path is treacherous. Challenges will come your way, riddles of logic, puzzles of code, and only through your skill can Player 48 navigate the horrors of this game. But remember—this is not just a challenge of intelligence; it’s a test of wit and timing.
 
 Are you ready to face the dangers of the Squid Game and help Player 48 escape with their life... and the fortune?
 
@@ -37,7 +37,11 @@ Good luck, Player 136. The future of Player 48 rests in your hands."""
     # Counter for the position of next character to display
     self.current_position = 0
     # Start the typing effect
+    
     anvil.js.call_js('startTypingEffect', self.type_text)
+    self.text_box_1.visible = False
+    self.label_1.visible =True
+    
 
 
 
@@ -57,7 +61,7 @@ Good luck, Player 136. The future of Player 48 rests in your hands."""
       # Stop the typing effect
       self.text_box_1.visible = True
       anvil.js.call_js('stopTypingEffect')
-    # Any code you write here will run before the form opens.
+    
 
   def text_box_1_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""

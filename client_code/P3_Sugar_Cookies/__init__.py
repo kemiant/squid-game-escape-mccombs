@@ -62,7 +62,7 @@ But the shapes alone will not guide you. Hidden in the very letters of this mess
       # Add cursor
       self.label_1.text += "▮"
     else:
-      time.sleep(1)
+      
       # Stop the typing effect
       anvil.js.call_js("stopTypingEffect")
       self.label_1.visible = False
