@@ -113,10 +113,13 @@ The game is rigged against them, but the right combination of 6 players could be
       self.sim_fail.visible = False
       
   def instruction_file_click(self, **event_args):
+    '''
     file_media = anvil.server.call('get_file','p4_file')
     if file_media is not None:
       anvil.download(file_media)
     else:
       notification = "The file could not be found."
       anvil.alert(notification)
+    '''
+    anvil.js.window.open("https://colab.research.google.com/drive/1PxaJm5p-e3Vi2U6uairMdbMWkp9zgYA3?usp=sharing", "_blank")
 

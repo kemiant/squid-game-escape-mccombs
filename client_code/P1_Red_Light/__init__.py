@@ -114,12 +114,14 @@ Click the button below to get hacking and stay alive!
 
 
   def instruction_file_click(self, **event_args):
-    file_media = anvil.server.call('get_file','p1_file')
-    if file_media is not None:
-      anvil.download(file_media)
-    else:
-      notification = "The file could not be found."
-      anvil.alert(notification)
+    #file_media = anvil.server.call('get_file','p1_file')
+    #if file_media is not None:
+    #  anvil.download(file_media)
+    ##else:
+    #  notification = "The file could not be found."
+     # anvil.alert(notification)
+    anvil.js.window.open("https://colab.research.google.com/drive/1q0MWSvklaQlnHsTBpCzbkX8VQAB39Uqz?usp=sharing", "_blank")
+
       
   def timer_1_tick(self, **event_args):
     self.stay_alive += 1

@@ -101,9 +101,12 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
       
 
   def instruction_file_click(self, **event_args):
+    '''
     file_media = anvil.server.call('get_file','p2_file')
     if file_media is not None:
       anvil.download(file_media)
     else:
       notification = "The file could not be found."
       anvil.alert(notification)
+    '''
+    anvil.js.window.open("https://colab.research.google.com/drive/1f56MV60gdr__45PtoHlcQLZBfDjX0kXs?usp=sharing", "_blank")

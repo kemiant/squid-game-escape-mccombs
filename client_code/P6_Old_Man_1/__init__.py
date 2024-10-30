@@ -91,11 +91,14 @@ The weight of the truth presses down, the room feels colder, more isolated. But 
       alert("We tried inputting that password, but it did not work")
 
   def instruction_file_click(self, **event_args):
+    '''
     file_media = anvil.server.call('get_file','p6_file')
     if file_media is not None:
       anvil.download(file_media)
     else:
       notification = "The file could not be found."
       anvil.alert(notification)
+    '''
+    anvil.js.window.open("https://colab.research.google.com/drive/12atBbSM2OW3DFoVknQbw1Ct3Zl80OI72?usp=sharing", "_blank")
 
   
