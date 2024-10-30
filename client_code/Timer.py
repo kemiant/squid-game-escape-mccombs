@@ -22,18 +22,15 @@ def set_time(time):
   current_time = time
 
 team_times_start = {}
-team_times_end = {}
+team_times_end = None
+time_elapsed = None
 
 def start_time(problem):
   global team_times_start
   team_times_start[problem] = datetime.now(timezone.utc)
 
-def end_time(problem):
+def end_time():
   global team_times_end
-  team_times_end[problem] = datetime.now(timezone.utc)
-
-def elapsed_time():
-  global team_times_end
-  global team_times_start
-
-  return team_times_end['p6'] - team_times_start['p1']
+  global time_elapsed
+  team_times_end = datetime.now(timezone.utc)
+  time_elapsed = team_times_end - team_times_start['p1']
