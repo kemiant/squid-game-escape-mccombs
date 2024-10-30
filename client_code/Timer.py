@@ -19,3 +19,8 @@ def get_time():
 def set_time(time):
   global current_time
   current_time = time
+
+team_times_start = {}
+
+def start_time(problem):
+  team_times[problem] = 
