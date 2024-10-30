@@ -122,7 +122,7 @@ Click the button below to get hacking and stay alive!
     ##else:
     #  notification = "The file could not be found."
      # anvil.alert(notification)
-    anvil.js.window.open("https://colab.research.google.com/drive/1q0MWSvklaQlnHsTBpCzbkX8VQAB39Uqz/copy", "_blank")
+    anvil.js.window.open("https://colab.research.google.com/drive/1q0MWSvklaQlnHsTBpCzbkX8VQAB39Uqz?usp=sharing", "_blank")
 
       
   def timer_1_tick(self, **event_args):

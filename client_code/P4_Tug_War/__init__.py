@@ -69,7 +69,8 @@ The game is rigged against them, but the right combination of 6 players could be
       self.card_2.visible =True
       self.card_3.visible =True
       self.card_4.visible =True
-      anvil.server.call_s('start_timer', 'p4_start')
+      Timer.start_time('p4')
+      # anvil.server.call_s('start_timer', 'p4_start')
       self.begin_time = True
       self.time_elapsed.visible = True
 

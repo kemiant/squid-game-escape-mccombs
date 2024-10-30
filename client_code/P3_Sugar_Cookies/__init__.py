@@ -9,6 +9,7 @@ from anvil import Timer
 import anvil.js
 import time
 from .. import HashingFunction
+from .. import Timer
 
 class P3_Sugar_Cookies(P3_Sugar_CookiesTemplate):
   def __init__(self, **properties):
@@ -71,7 +72,8 @@ But the shapes alone will not guide you. Hidden in the very letters of this mess
      # self.card_2.visible =True
       self.card_3.visible =True
       self.card_4.visible =True
-      anvil.server.call_s('start_timer', 'p3_start')
+      Timer.start_time('p3')
+      # anvil.server.call_s('start_timer', 'p3_start')
       self.begin_time = True
       self.time_elapsed.visible = True
 

@@ -9,6 +9,7 @@ from anvil import Timer
 import anvil.js
 import time
 from .. import HashingFunction
+from .. import Timer
 
 
 class P2_Glass_Steps(P2_Glass_StepsTemplate):
@@ -66,7 +67,8 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
       self.card_2.visible =True
       self.card_3.visible =True
       self.card_4.visible =True
-      anvil.server.call_s('start_timer', 'p2_start')
+      Timer.start_time('p2')
+      # anvil.server.call_s('start_timer', 'p2_start')
       self.begin_time = True
       self.time_elapsed.visible = True
 
