@@ -34,3 +34,5 @@ def end_time():
   global time_elapsed
   team_times_end = datetime.now(timezone.utc)
   time_elapsed = team_times_end - team_times_start['p1']
+
+  return time_elapsed

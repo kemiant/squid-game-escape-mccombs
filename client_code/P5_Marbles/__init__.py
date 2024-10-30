@@ -8,6 +8,7 @@ import anvil.server
 from anvil import Timer
 import anvil.js
 import time
+from .. import Timer
 
 class P5_Marbles(P5_MarblesTemplate):
   def __init__(self, **properties):
@@ -169,7 +170,8 @@ Will you gather the 10 marbles in time, or will the participant’s journey end 
       self.card_2.visible =True
       self.card_3.visible =True
       self.grid_panel_1.visible =True
-      anvil.server.call_s('start_timer', 'p5_start')
+      Timer.start_time('p5')
+      # anvil.server.call_s('start_timer', 'p5_start')
       self.begin_time = True
       self.time_elapsed.visible = True
 

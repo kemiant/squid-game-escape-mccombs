@@ -9,6 +9,7 @@ from anvil import Timer
 import anvil.js
 import time
 from .. import HashingFunction
+from .. import Timer
 
 class P4_Tug_War(P4_Tug_WarTemplate):
   def __init__(self, **properties):

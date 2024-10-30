@@ -9,6 +9,7 @@ from anvil import Timer
 import anvil.js
 import time
 from .. import HashingFunction
+from .. import Timer
 
 class P6_Old_Man_1(P6_Old_Man_1Template):
   def __init__(self, **properties):
@@ -59,7 +60,8 @@ The weight of the truth presses down, the room feels colder, more isolated. But 
       self.card_2.visible =True
       self.card_3.visible =True
       self.card_4.visible =True
-      anvil.server.call_s('start_timer', 'p6_start')
+      Timer.start_time('p6')
+      # anvil.server.call_s('start_timer', 'p6_start')
       self.begin_time = True
       self.time_elapsed.visible = True
 
