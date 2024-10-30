@@ -44,11 +44,11 @@ Will you gather the 10 marbles in time, or will the participant’s journey end 
     self.questions = [
         {"question": q, "item_index": i} for i, q in enumerate([
           "Find the game with the highest survival rate.",
-          "List all games where the survival rate is above 50%. (Count)",
+          "How many games have a survival rate above 50%. (Count)",
           "How many games have a difficulty rating of 8 or higher?",
           "Display the count of games where the maximum participants exceed 100.",
           "Find the game with the lowest difficulty level.",
-          "What is the average survival rate across all games?",
+          "What is the average survival rate across all games? (round to 2 decimal places)",
           "How many games have exactly 100 participants?",
           "Retrieve the game with the lowest difficulty.",
           "Find the count of games with a survival rate less than 0.5.",
