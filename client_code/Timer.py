@@ -11,6 +11,11 @@ from anvil.tables import app_tables
 #    Module1.say_hello()
 #
 
+current_time = 0
 
-def say_hello():
-  print("Hello, world")
+def get_time():
+  return current_time
+
+def set_time(time):
+  global current_time
+  current_time = time

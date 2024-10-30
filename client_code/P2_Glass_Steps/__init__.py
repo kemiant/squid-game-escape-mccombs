@@ -9,6 +9,7 @@ from anvil import Timer
 import anvil.js
 import time
 from .. import HashingFunction
+from .. import Timer
 
 
 class P2_Glass_Steps(P2_Glass_StepsTemplate):
@@ -37,7 +38,7 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
     self.current_position = 0
     # Start the typing effect
     anvil.js.call_js("startTypingEffect", self.type_text)
-    self.total_time = 0
+    self.total_time = Timer.get_time()
     self.begin_time = False
     self.stay_alive = 0
     
