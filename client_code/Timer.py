@@ -21,7 +21,7 @@ def set_time(time):
   global current_time
   current_time = time
 
-team_times_start = {}
+team_times_start = {'p1':None, 'p2':None, 'p3':None, 'p4':None, 'p5':None,'p6': None}
 team_times_end = None
 time_elapsed = None
 
@@ -57,6 +57,5 @@ def commit_times():
   team['end'] = team_times_end
   team['total_time'] = time_elapsed
 
-  
 
   
