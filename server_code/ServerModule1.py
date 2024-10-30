@@ -113,7 +113,7 @@ def get_file(file):
   #Challenge 1 check
 @anvil.server.callable
 def p1_check(entry):
-   if entry == "943YJXTKJLPFK":
+   if entry == "992TKGSSSTELS":
      return True
    else:
      return False  
