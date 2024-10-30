@@ -36,3 +36,10 @@ def end_time():
   time_elapsed = (team_times_end - team_times_start['p1']).total_seconds()
 
   return int(time_elapsed)
+
+def commit_times():
+  global team_times_start
+  global team_times_end
+  global time_elapsed
+
+  
