@@ -43,6 +43,7 @@ Good luck, Player 136. The future of Player 48 rests in your hands."""
 
   def type_text(self):
     # Remove cursor if it's there
+    
     if self.label_1.text.endswith('▮'):
       self.label_1.text = self.label_1.text[:-1]
 

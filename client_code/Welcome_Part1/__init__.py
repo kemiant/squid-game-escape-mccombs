@@ -5,7 +5,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+import time
 
 class Welcome_Part1(Welcome_Part1Template):
   def __init__(self, **properties):
@@ -21,6 +21,7 @@ Do you have what it takes? Will you risk it all for a chance at glory and unimag
     anvil.js.call_js("startTypingEffect", self.type_text)
 
   def type_text(self):
+    time.sleep(4)
     # Remove cursor if it's there
     if self.label_1.text.endswith("▮"):
       self.label_1.text = self.label_1.text[:-1]

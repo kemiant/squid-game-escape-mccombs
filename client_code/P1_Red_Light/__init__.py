@@ -134,6 +134,7 @@ Click the button below to get hacking and stay alive!
       
       self.time_elapsed.text = f"{minutes} min {seconds} sec"
     self.stay_alive += 1  
+    #maybe this is causing downlink error in the code
     if self.stay_alive >= 300:
       self.stay_alive = 0
       anvil.server.call_s('stay_alive')
