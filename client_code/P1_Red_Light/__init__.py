@@ -98,6 +98,7 @@ Click the button below to get hacking and stay alive!
   def submit_click(self, **event_args):
 
     if HashingFunction.hash_func(self.text_box_1.text) == 117346317:
+      Timer.set_time(self.total_time)
       open_form('P2_Glass_Steps')
     else:
       alert("We tried inputting that password, but it did not work")

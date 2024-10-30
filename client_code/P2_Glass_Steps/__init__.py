@@ -86,12 +86,14 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
       
   def submit_click(self, **event_args):
     if HashingFunction.hash_func(self.text_box_1.text) == 4258531534:
+      Timer.set_time(self.total_time)
       open_form('P3_Sugar_Cookies')
     else:
       alert("We tried inputting that password, but it did not work")
 
   def text_box_1_pressed_enter(self, **event_args):
     if HashingFunction.hash_func(self.text_box_1.text) == 4258531534:
+      Timer.set_time(self.total_time)
       open_form('P3_Sugar_Cookies')
     else:
       alert("We tried inputting that password, but it did not work")
