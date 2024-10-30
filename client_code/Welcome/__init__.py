@@ -62,7 +62,8 @@ Good luck, Player 136. The future of Player 48 rests in your hands."""
     """This method is called when the user presses Enter in this text box"""
     team_name = self.text_box_1.text
     Timer.set_team_name(team_name)
-    anvil.server.call_s('register_team', team_name)
+    
+    #anvil.server.call_s('register_team', team_name)
     
     response = anvil.server.call('register_or_resume_team', team_name)
     
