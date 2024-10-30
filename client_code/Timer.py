@@ -33,6 +33,6 @@ def end_time():
   global team_times_end
   global time_elapsed
   team_times_end = datetime.now(timezone.utc)
-  time_elapsed = team_times_end - team_times_start['p1']
+  time_elapsed = (team_times_end - team_times_start['p1']).total_seconds()
 
-  return time_elapsed
+  return int(time_elapsed)
