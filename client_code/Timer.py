@@ -3,6 +3,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import datetime, timedelta, timezone
 # This is a module.
 # You can define variables and functions here, and use them from any form. For example, in a top-level form:
 #
@@ -23,4 +24,5 @@ def set_time(time):
 team_times_start = {}
 
 def start_time(problem):
-  team_times[problem] = 
+  global team_times_start
+  team_times_start[problem] = datetime.now(timezone.utc)
