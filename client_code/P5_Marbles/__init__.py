@@ -107,7 +107,7 @@ Will you gather the 10 marbles in time, or will the participant’s journey end 
       "4",  # Answer to question 27
       "1",  # Answer to question 28
       "0",  # Answer to question 29
-      "20"]  # Answer to question 30
+      "247"]  # Answer to question 30
     self.correct_count = 0
     self.marble_counter.text = f"{self.correct_count} out of 10"
     self.card_2.visible =False
