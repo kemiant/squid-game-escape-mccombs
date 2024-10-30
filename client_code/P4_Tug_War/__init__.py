@@ -98,7 +98,7 @@ The game is rigged against them, but the right combination of 6 players could be
       self.animated.visible = False
       self.sim_win.visible = True
       Notification(f"Team Positions Simulation Passed! Moving to next stage...").show()
-      time.sleep(3)
+      time.sleep(6)
       open_form('P5_Marbles')
     else:
       self.combination_lock_1.clear_values()
