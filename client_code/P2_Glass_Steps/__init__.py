@@ -9,7 +9,6 @@ from anvil import Timer
 import anvil.js
 import time
 from .. import HashingFunction
-from .. import Timer
 
 
 class P2_Glass_Steps(P2_Glass_StepsTemplate):
@@ -38,7 +37,7 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
     self.current_position = 0
     # Start the typing effect
     anvil.js.call_js("startTypingEffect", self.type_text)
-    self.total_time = Timer.get_time()
+    self.total_time = 0
     self.begin_time = False
     self.stay_alive = 0
     
@@ -86,14 +85,12 @@ The fate of Player 48 is in your hands. The clock is ticking, and the glass brid
       
   def submit_click(self, **event_args):
     if HashingFunction.hash_func(self.text_box_1.text) == 4258531534:
-      Timer.set_time(self.total_time)
       open_form('P3_Sugar_Cookies')
     else:
       alert("We tried inputting that password, but it did not work")
 
   def text_box_1_pressed_enter(self, **event_args):
     if HashingFunction.hash_func(self.text_box_1.text) == 4258531534:
-      Timer.set_time(self.total_time)
       open_form('P3_Sugar_Cookies')
     else:
       alert("We tried inputting that password, but it did not work")
