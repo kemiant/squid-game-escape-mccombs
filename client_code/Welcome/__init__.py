@@ -61,12 +61,13 @@ Good luck, Player 136. The future of Player 48 rests in your hands."""
   def text_box_1_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
     team_name = self.text_box_1.text
-    Timer.set_team_name(team_name)
     # anvil.server.call_s('register_team', team_name)
     # open_form('C1_IdentifyArt')
     
-    response = anvil.server.call('register_or_resume_team', team_name)
-    
+    # response = anvil.server.call('register_or_resume_team', team_name)
+    Timer.set_team_name(team_name)
+    response = Timer.start_resume_team()
+
     # Check the response status
     if response['status'] == 'resumed' and response['last_started_form']:
         # The team is resuming, open the last started form
