@@ -53,7 +53,7 @@ Click the button below to get hacking and stay alive!
     self.current_position = 0
     # Start the typing effect
     anvil.js.call_js("startTypingEffect", self.type_text)
-    self.total_time = Timer.get_time()
+    self.total_time = 0
     self.begin_time = False
     self.stay_alive = 0
     self.image_2.visible= False
@@ -90,6 +90,7 @@ Click the button below to get hacking and stay alive!
       self.card_2.visible =True
       self.card_3.visible =True
       self.card_4.visible =True
+      Timer.
       anvil.server.call_s('start_timer', 'p1_start')
       self.begin_time = True
       self.time_elapsed.visible = True
@@ -98,7 +99,6 @@ Click the button below to get hacking and stay alive!
   def submit_click(self, **event_args):
 
     if HashingFunction.hash_func(self.text_box_1.text) == 117346317:
-      Timer.set_time(self.total_time)
       open_form('P2_Glass_Steps')
     else:
       alert("We tried inputting that password, but it did not work")
@@ -110,7 +110,6 @@ Click the button below to get hacking and stay alive!
       
   def text_box_1_pressed_enter(self, **event_args):
     if HashingFunction.hash_func(self.text_box_1.text) == 117346317:
-      Timer.set_time(self.total_time)
       open_form('P2_Glass_Steps')
     else:
       alert("We tried inputting that password, but it did not work")
