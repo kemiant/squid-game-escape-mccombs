@@ -188,6 +188,10 @@ Will you gather the 10 marbles in time, or will the participant’s journey end 
       self.stay_alive = 0
       anvil.server.call_s('stay_alive')
 
+  def instruction_file_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.js.window.open("https://colab.research.google.com/drive/1zUKMdO9POxGL3ut3WboqYIGWcvR1rhr_?usp=sharing", "_blank")
+
   
 
 
