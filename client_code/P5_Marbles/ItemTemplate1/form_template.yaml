@@ -4,7 +4,8 @@ components:
   properties: {background: '', foreground: '#ff5900'}
   type: Label
 - components:
-  - layout_properties: {width: 466.351375}
+  - event_bindings: {pressed_enter: text_box_1_pressed_enter}
+    layout_properties: {width: 466.351375}
     name: text_box_1
     properties: {role: null, text: Type your answer here...}
     type: TextBox

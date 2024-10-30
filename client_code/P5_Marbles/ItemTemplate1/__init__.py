@@ -25,4 +25,14 @@ class ItemTemplate1(ItemTemplate1Template):
     if self.item['item_index'] != -1:
       get_open_form().store_answer(self.item['item_index'], answer)
       get_open_form().update_item_index(self.item['item_index'], -1)
+
+  def text_box_1_focus(self, **event_args):
+    # Check if the text is still the default text
+    if self.text_box_1.text == "Type your answer here...":
+      # Clear the default text
+      self.text_box_1.text = ""
+      
+  def text_box_1_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
     
