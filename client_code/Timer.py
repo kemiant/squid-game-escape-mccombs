@@ -37,9 +37,26 @@ def end_time():
 
   return int(time_elapsed)
 
+team_name = None
+
+def set_team_name(new_name):
+  global team_name
+  team_name = new_name
+
 def commit_times():
   global team_times_start
   global team_times_end
   global time_elapsed
+  global team_name
+  team = app_tables.teams.get(team_name=team_name)
+
+  for problem, start_time in team_times_start.items():
+    problem_column = problem + "_start"
+    team[problem_column] = start_time
+
+  team['end'] = team_times_end
+  team['total_time'] = time_elapsed
+
+  
 
   

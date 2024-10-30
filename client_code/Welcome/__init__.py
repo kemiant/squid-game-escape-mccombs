@@ -5,6 +5,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from .. import Timer
 
 class Welcome(WelcomeTemplate):
   def __init__(self, **properties):
@@ -60,6 +61,7 @@ Good luck, Player 136. The future of Player 48 rests in your hands."""
   def text_box_1_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
     team_name = self.text_box_1.text
+    Timer.set_team_name(team_name)
     # anvil.server.call_s('register_team', team_name)
     # open_form('C1_IdentifyArt')
     

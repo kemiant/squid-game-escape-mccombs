@@ -15,6 +15,7 @@ class completion(completionTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.elapsed = Timer.end_time()
+    Timer.commit_times()
     # self.elapsed = anvil.server.call_s('stop_timer')
     self.elapsed1 = str(int(self.elapsed//60)) + ' min ' + str(int(self.elapsed % 60)) + ' sec'
     self.text_to_display1 = f"""Congratulations, Player 136!
