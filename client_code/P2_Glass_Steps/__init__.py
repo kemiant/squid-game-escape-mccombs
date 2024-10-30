@@ -5,7 +5,7 @@ import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
-from anvil import Timer
+# from anvil import Timer
 import anvil.js
 import time
 from .. import HashingFunction
